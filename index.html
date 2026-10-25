@@ -1,0 +1,3049 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shuttrly — Digital Marketing & Creative Growth Agency | shuttrly.com</title>
+  <meta name="description" content="Shuttrly is a premium digital marketing agency helping ambitious brands build their online presence, strengthen brand identity, and achieve measurable digital growth." />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Inter, Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* =========================================================================
+       SHUTTRLY BRAND TYPOGRAPHY & DYNAMIC ISLAND SPRING PHYSICS
+       ========================================================================= */
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #FFFFFF;
+      color: #25232B;
+    }
+
+    .font-display {
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    }
+
+    .font-mono-tech {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Dynamic Island Fluid Spring Transition */
+    .dynamic-island-pill {
+      transition:
+        max-width 680ms cubic-bezier(0.22, 1, 0.36, 1),
+        padding 680ms cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 500ms cubic-bezier(0.22, 1, 0.36, 1),
+        border-color 400ms ease,
+        transform 400ms cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: max-width, padding, box-shadow;
+    }
+
+    .dynamic-island-wing {
+      transition:
+        max-width 640ms cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 420ms cubic-bezier(0.22, 1, 0.36, 1),
+        transform 560ms cubic-bezier(0.22, 1, 0.36, 1),
+        margin 640ms cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: max-width, opacity, transform;
+    }
+
+    @keyframes countdownShrink {
+      0% {
+        transform: scaleX(1);
+        opacity: 0.9;
+      }
+      100% {
+        transform: scaleX(0);
+        opacity: 0.2;
+      }
+    }
+
+    .animate-2s-bar {
+      transform-origin: center;
+      animation: countdownShrink 2000ms linear forwards;
+    }
+
+    /* Subtle Editorial Grid Background */
+    .bg-editorial-grid {
+      background-size: 48px 48px;
+      background-image:
+        linear-gradient(to right, rgba(233, 230, 239, 0.45) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(233, 230, 239, 0.45) 1px, transparent 1px);
+    }
+
+    /* Custom Range Slider Styling */
+    input[type="range"] {
+      accent-color: #7138E8;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-[#FFFFFF] text-[#25232B] antialiased selection:bg-[#7138E8] selection:text-white overflow-x-hidden">
+
+  <!-- =========================================================================
+       3. SIGNATURE FEATURE: DYNAMIC ISLAND-INSPIRED FLOATING NAVIGATION
+       =========================================================================
+       - Fixed at top-center (22px from top, horizontally centered via left-1/2 -translate-x-1/2).
+       - Loads immediately in its fully expanded state showing:
+           Left: Shuttrly Logo
+           Middle: Navigation Links
+           Right: "Let's Talk ↗" CTA
+       - After exactly 2.0 seconds from initial load, folds inward smoothly
+         toward the center around the Shuttrly logo (compact logo-only state).
+       - Expands smoothly on hover, focus, or tap without ever sliding off-center.
+  -->
+  <header
+    class="fixed top-[22px] left-1/2 -translate-x-1/2 z-50 w-auto max-w-[96vw] flex flex-col items-center"
+    aria-label="Primary Dynamic Navigation"
+  >
+    <nav
+      id="dynamic-island-nav"
+      style="max-width: 1060px;"
+      class="dynamic-island-pill relative flex items-center justify-center rounded-full bg-[#FFFFFF]/95 backdrop-blur-md border px-4 sm:px-6 py-2.5 border-[#E9E6EF] shadow-[0_18px_45px_-12px_rgba(37,35,43,0.13),0_4px_16px_-2px_rgba(113,56,232,0.08)]"
+    >
+      <!-- Subtle 2.0s Initial Load Progress Line along bottom of pill -->
+      <div
+        id="island-2s-progress-container"
+        class="absolute bottom-0 left-8 right-8 h-[2px] overflow-hidden rounded-full pointer-events-none"
+      >
+        <div
+          id="island-2s-progress-bar"
+          class="w-full h-full bg-gradient-to-r from-[#7138E8] via-[#D946EF] to-[#5125B8] animate-2s-bar"
+        ></div>
+      </div>
+
+      <!-- Brand Logo: Always crisp, preserved proportions, centered when compact, on left when expanded -->
+      <a
+        href="#hero"
+        onclick="event.preventDefault(); scrollToSection('hero');"
+        class="relative flex items-center justify-center focus:outline-none group shrink-0"
+        title="Shuttrly — Return to Top"
+      >
+        <div
+          class="inline-flex items-center select-none shrink-0"
+          style="width: 158px; height: 46px;"
+          aria-label="Shuttrly Digital Marketing Agency"
+        >
+          <svg
+            viewBox="0 0 680 198"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-full h-full overflow-visible"
+            role="img"
+          >
+            <defs>
+              <linearGradient id="shutter-b1-nav-island" x1="42" y1="78" x2="115" y2="18" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#4A1FB8" />
+                <stop offset="55%" stop-color="#7138E8" />
+                <stop offset="100%" stop-color="#B845F5" />
+              </linearGradient>
+              <linearGradient id="shutter-b2-nav-island" x1="94" y1="68" x2="184" y2="30" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#7138E8" />
+                <stop offset="55%" stop-color="#C84BF2" />
+                <stop offset="100%" stop-color="#F5A3FF" />
+              </linearGradient>
+              <linearGradient id="shutter-b2-fold-nav-island" x1="120" y1="64" x2="178" y2="54" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#2E1075" />
+                <stop offset="100%" stop-color="#5D26C9" />
+              </linearGradient>
+              <linearGradient id="shutter-b3-nav-island" x1="26" y1="62" x2="106" y2="122" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#9B51F5" />
+                <stop offset="50%" stop-color="#5E27D4" />
+                <stop offset="100%" stop-color="#351285" />
+              </linearGradient>
+              <linearGradient id="shutter-b4-nav-island" x1="108" y1="84" x2="182" y2="154" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#3D1694" />
+                <stop offset="48%" stop-color="#9338EC" />
+                <stop offset="100%" stop-color="#F088FF" />
+              </linearGradient>
+              <linearGradient id="shutter-b5-nav-island" x1="110" y1="184" x2="164" y2="128" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#7C3AED" />
+                <stop offset="55%" stop-color="#4318A8" />
+                <stop offset="100%" stop-color="#260B6E" />
+              </linearGradient>
+              <linearGradient id="shutter-b6-nav-island" x1="36" y1="142" x2="118" y2="174" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#4F67F5" />
+                <stop offset="52%" stop-color="#4324C7" />
+                <stop offset="100%" stop-color="#280D7A" />
+              </linearGradient>
+              <linearGradient id="shutter-b6-fold-nav-island" x1="38" y1="132" x2="102" y2="138" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#4A25B8" />
+                <stop offset="100%" stop-color="#1B0854" />
+              </linearGradient>
+              <linearGradient id="ly-grad-nav-island" x1="560" y1="44" x2="612" y2="176" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#D946EF" />
+                <stop offset="48%" stop-color="#8B35EA" />
+                <stop offset="100%" stop-color="#461AA8" />
+              </linearGradient>
+            </defs>
+
+            <!-- S-SHAPED CAMERA SHUTTER ICON (Exact 6-Blade Geometry) -->
+            <g transform="translate(8, 6)">
+              <path d="M36 55 C50 28, 76 12, 108 10 L84 68 C66 73, 52 70, 36 55 Z" fill="url(#shutter-b1-nav-island)" />
+              <path d="M114 10 C145 12, 171 29, 184 54 C156 50, 122 54, 91 71 L114 10 Z" fill="url(#shutter-b2-nav-island)" />
+              <path d="M122 57 C146 53, 166 53, 182 55 L161 73 C149 65, 136 60, 122 57 Z" fill="url(#shutter-b2-fold-nav-island)" />
+              <path d="M33 61 C54 88, 78 108, 108 117 C70 118, 41 108, 25 88 C24 78, 27 69, 33 61 Z" fill="url(#shutter-b3-nav-island)" />
+              <path d="M107 79 C148 82, 177 97, 186 121 C186 135, 181 148, 172 159 C161 132, 138 104, 107 79 Z" fill="url(#shutter-b4-nav-island)" />
+              <path d="M132 108 C149 125, 161 143, 168 163 C152 177, 129 185, 104 185 L132 108 Z" fill="url(#shutter-b5-nav-island)" />
+              <path d="M57 125 L73 135 C86 139, 102 136, 120 126 L98 184 C69 181, 45 165, 32 142 L57 125 Z" fill="url(#shutter-b6-nav-island)" />
+              <path d="M32 142 L57 125 C69 133, 88 136, 114 129 C84 143, 56 145, 32 142 Z" fill="url(#shutter-b6-fold-nav-island)" />
+            </g>
+
+            <!-- "huttr" GEOMETRIC CHARCOAL LETTERING (#25232B) -->
+            <g fill="#25232B">
+              <path d="M218 44 H240 V82 C246 73, 257 68, 270 68 C292 68, 305 82, 305 105 V146 H283 V109 C283 94, 275 87, 263 87 C250 87, 240 95, 240 110 V146 H218 V44 Z" />
+              <path d="M321 70 H343 V108 C343 122, 351 129, 363 129 C375 129, 383 122, 383 108 V70 H405 V110 C405 134, 388 148, 363 148 C338 148, 321 134, 321 110 V70 Z" />
+              <path d="M428 46 H450 V70 H468 V88 H450 V117 C450 125, 455 129, 464 129 H469 V146 H460 C439 146, 428 136, 428 117 V46 Z" />
+              <path d="M479 46 H501 V70 H519 V88 H501 V117 C501 125, 506 129, 515 129 H520 V146 H511 C490 146, 479 136, 479 117 V46 Z" />
+              <path d="M531 70 H552 V83 C557 73, 567 68, 579 68 V89 H574 C560 89, 553 96, 553 111 V146 H531 V70 Z" />
+            </g>
+
+            <!-- "ly" VIOLET-TO-MAGENTA GRADIENT LETTERING -->
+            <g fill="url(#ly-grad-nav-island)">
+              <path d="M585 43 H607 V119 C607 126, 611 129, 618 129 H621 V146 H613 C594 146, 585 137, 585 119 V43 Z" />
+              <path d="M615 70 H639 L656 116 L673 70 H696 L656 165 C650 179, 640 185, 624 185 H617 V167 H622 C630 167, 635 164, 638 156 L643 144 L615 70 Z" />
+            </g>
+
+            <!-- "DIGITAL MARKETING AGENCY" TAGLINE -->
+            <text
+              x="218"
+              y="177"
+              fill="#25232B"
+              font-family="Inter, system-ui, -apple-system, sans-serif"
+              font-size="15.5"
+              font-weight="600"
+              letter-spacing="0.34em"
+            >
+              DIGITAL MARKETING AGENCY
+            </text>
+          </svg>
+        </div>
+      </a>
+
+      <!-- Middle Navigation Links + Right CTA (Smoothly Folds Inward when Compact) -->
+      <div
+        id="dynamic-island-wing"
+        style="max-width: 780px; opacity: 1; transform: scale(1);"
+        aria-hidden="false"
+        class="dynamic-island-wing overflow-hidden flex items-center ml-3 lg:ml-6 pointer-events-auto"
+      >
+        <!-- Desktop Navigation Links -->
+        <ul id="desktop-nav-links" class="hidden md:flex items-center gap-1 lg:gap-1.5 whitespace-nowrap pr-3 lg:pr-5">
+          <!-- Populated dynamically via JS for active state sync -->
+        </ul>
+
+        <!-- Right Action Group: Pin Toggle + Mobile Menu Button + "Let's Talk ↗" CTA -->
+        <div class="flex items-center gap-2 whitespace-nowrap pl-1 border-l border-[#E9E6EF]">
+          <!-- Optional Pin/Unpin Capsule Button -->
+          <button
+            id="pin-island-btn"
+            type="button"
+            onclick="event.stopPropagation(); togglePinIsland();"
+            title="Pin navigation open"
+            class="hidden lg:inline-flex items-center justify-center w-8 h-8 rounded-full border border-transparent text-[#777481] hover:text-[#25232B] hover:bg-[#F7F6FA] text-xs transition-colors"
+          >
+            <i id="pin-island-icon" data-lucide="unlock" class="w-3.5 h-3.5"></i>
+          </button>
+
+          <!-- Mobile Menu Drawer Trigger -->
+          <button
+            id="mobile-menu-btn"
+            type="button"
+            onclick="event.stopPropagation(); toggleMobileMenu();"
+            class="md:hidden inline-flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold text-[#25232B] bg-[#F7F6FA] border border-[#E9E6EF]"
+          >
+            <span>Menu</span>
+            <i id="mobile-menu-chevron" data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform"></i>
+          </button>
+
+          <!-- Signature "Let's Talk ↗" CTA -->
+          <button
+            type="button"
+            onclick="event.stopPropagation(); scrollToSection('contact');"
+            class="inline-flex items-center gap-1.5 px-4 sm:px-5 py-2.5 rounded-full text-[13.5px] font-semibold text-white bg-gradient-to-r from-[#7138E8] via-[#622CD1] to-[#D946EF] hover:opacity-95 shadow-[0_6px_20px_-4px_rgba(113,56,232,0.5)] transition-all duration-200 active:scale-[0.98]"
+          >
+            <span>Let's Talk</span>
+            <span class="text-sm leading-none">↗</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Dropdown Pill Sheet when Mobile Menu is toggled -->
+    <div
+      id="mobile-menu-sheet"
+      class="hidden md:hidden mt-2 w-[90vw] max-w-sm rounded-3xl bg-white/98 backdrop-blur-xl border border-[#E9E6EF] shadow-2xl p-4"
+    >
+      <div id="mobile-nav-links" class="grid grid-cols-2 gap-2 mb-3">
+        <!-- Populated via JS -->
+      </div>
+      <button
+        type="button"
+        onclick="scrollToSection('contact');"
+        class="w-full py-3 rounded-2xl text-sm font-semibold text-white bg-gradient-to-r from-[#7138E8] to-[#D946EF] flex items-center justify-center gap-2"
+      >
+        <span>Start Your Project — Let's Talk ↗</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       4. HERO SECTION: EDITORIAL HIERARCHY + INTERACTIVE SHUTTER VISUALIZER
+       ========================================================================= -->
+  <section
+    id="hero"
+    class="relative pt-32 sm:pt-36 lg:pt-40 pb-20 lg:pb-28 bg-editorial-grid border-b border-[#E9E6EF] overflow-hidden"
+  >
+    <!-- Subtle Ambient Radial Glows -->
+    <div
+      class="pointer-events-none absolute -top-24 right-[8%] w-[520px] h-[520px] rounded-full blur-3xl opacity-20"
+      style="background: radial-gradient(circle, #7138E8 0%, #D946EF 45%, transparent 72%);"
+    ></div>
+    <div
+      class="pointer-events-none absolute bottom-0 left-[2%] w-[420px] h-[420px] rounded-full blur-3xl opacity-10"
+      style="background: radial-gradient(circle, #5125B8 0%, transparent 70%);"
+    ></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <!-- Dynamic Island Interactive Status Strip -->
+      <div class="flex flex-wrap items-center justify-between gap-3 mb-8 pb-4 border-b border-[#E9E6EF]/80 text-xs text-[#777481]">
+        <div class="inline-flex items-center gap-2.5">
+          <span class="relative flex h-2.5 w-2.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#7138E8] opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#7138E8]"></span>
+          </span>
+          <span class="font-mono-tech uppercase tracking-wider text-[#25232B] font-semibold">
+            SHUTTRLY.COM // Q4 &amp; Q1 GROWTH PARTNERSHIPS OPEN
+          </span>
+          <span class="hidden sm:inline text-[#777481]">
+            — 2 New Client Slots Remaining
+          </span>
+        </div>
+
+        <div class="inline-flex items-center gap-3">
+          <span class="hidden md:inline-flex items-center gap-1.5 text-[11px] bg-[#F7F6FA] px-2.5 py-1 rounded-full border border-[#E9E6EF] text-[#777481]">
+            <i data-lucide="aperture" class="w-3.5 h-3.5 text-[#7138E8]"></i>
+            <span>
+              Dynamic Island Nav:
+              <strong id="nav-status-label" class="text-[#25232B]">Expanded</strong>
+            </span>
+          </span>
+          <button
+            type="button"
+            onclick="replayDynamicIslandIntro();"
+            class="inline-flex items-center gap-1 text-[11px] font-medium text-[#7138E8] hover:text-[#5125B8] bg-[#7138E8]/10 hover:bg-[#7138E8]/15 px-2.5 py-1 rounded-full transition-colors"
+            title="Replay the 2-second Dynamic Island initial load animation"
+          >
+            <i data-lucide="rotate-ccw" class="w-3 h-3"></i>
+            <span>Replay 2s Nav Intro</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Asymmetric Editorial Hero Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+        <!-- Left Column: High-Impact Editorial Typography & Conversion CTAs (7 Cols) -->
+        <div class="lg:col-span-7 space-y-7">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F7F6FA] border border-[#E9E6EF]">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-[#7138E8]"></i>
+            <span class="text-xs font-semibold tracking-wide uppercase text-[#25232B]">
+              Creative Studio Craft × Performance Agency Rigor
+            </span>
+          </div>
+
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-[62px] font-extrabold tracking-tight text-[#25232B] leading-[1.06]">
+            Bring Your Brand Into
+            <span class="bg-gradient-to-r from-[#7138E8] via-[#5125B8] to-[#D946EF] bg-clip-text text-transparent">
+              Sharp Focus.
+            </span>
+            Engineer Measurable Growth.
+          </h1>
+
+          <p class="text-lg sm:text-xl text-[#777481] leading-relaxed max-w-2xl font-normal">
+            Shuttrly is the digital marketing and creative growth agency for ambitious brands. We combine
+            <span class="text-[#25232B] font-medium">category-defining brand identity</span>,
+            <span class="text-[#25232B] font-medium">high-converting flagship websites</span>, and
+            <span class="text-[#25232B] font-medium">full-funnel acquisition</span> to turn market attention into compounding revenue.
+          </p>
+
+          <!-- Primary & Secondary CTAs -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+            <button
+              type="button"
+              onclick="scrollToSection('contact');"
+              class="group inline-flex items-center justify-center gap-3 px-7 py-4 rounded-full text-base font-semibold text-white bg-gradient-to-r from-[#7138E8] via-[#5125B8] to-[#D946EF] shadow-[0_14px_34px_-8px_rgba(113,56,232,0.55)] hover:shadow-[0_18px_40px_-6px_rgba(113,56,232,0.7)] transition-all duration-300 hover:-translate-y-0.5"
+            >
+              <span>Start Your Growth Project</span>
+              <span class="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">
+                <i data-lucide="arrow-up-right" class="w-4 h-4 text-white"></i>
+              </span>
+            </button>
+
+            <button
+              type="button"
+              onclick="scrollToSection('work');"
+              class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full text-base font-semibold text-[#25232B] bg-white hover:bg-[#F7F6FA] border border-[#E9E6EF] hover:border-[#7138E8]/40 transition-all duration-200"
+            >
+              <i data-lucide="eye" class="w-4 h-4 text-[#7138E8]"></i>
+              <span>Explore Selected Work</span>
+            </button>
+          </div>
+
+          <!-- Trust Proof Bar -->
+          <div class="pt-4 grid grid-cols-3 gap-4 max-w-lg border-t border-[#E9E6EF]">
+            <div>
+              <div class="font-display text-2xl sm:text-3xl font-extrabold text-[#25232B]">3.8x</div>
+              <div class="text-xs text-[#777481] mt-0.5">Avg. Verified Client ROAS</div>
+            </div>
+            <div class="border-l border-[#E9E6EF] pl-4">
+              <div class="font-display text-2xl sm:text-3xl font-extrabold text-[#25232B]">$42M+</div>
+              <div class="text-xs text-[#777481] mt-0.5">Tracked Client Pipeline</div>
+            </div>
+            <div class="border-l border-[#E9E6EF] pl-4">
+              <div class="font-display text-2xl sm:text-3xl font-extrabold text-[#25232B]">98.4%</div>
+              <div class="text-xs text-[#777481] mt-0.5">Partner Retention Rate</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Shuttrly Camera-Shutter Campaign Visualizer (5 Cols) -->
+        <div class="lg:col-span-5">
+          <div class="relative rounded-[28px] bg-white border border-[#E9E6EF] shadow-[0_24px_60px_-15px_rgba(37,35,43,0.1)] p-5 sm:p-6 overflow-hidden">
+            <!-- Top Camera Viewfinder Telemetry Header -->
+            <div class="flex items-center justify-between pb-4 mb-5 border-b border-[#E9E6EF]">
+              <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-[#D946EF]"></span>
+                <span id="lens-code-display" class="font-mono-tech text-[11px] font-semibold tracking-wider text-[#25232B]">
+                  LENS 01 // F1.4
+                </span>
+              </div>
+              <div class="flex items-center gap-2 font-mono-tech text-[11px] text-[#777481]">
+                <span id="lens-speed-display" class="px-2 py-0.5 rounded bg-[#F7F6FA] border border-[#E9E6EF]">
+                  1/2000s
+                </span>
+                <span id="lens-aperture-badge" class="px-2 py-0.5 rounded bg-[#F7F6FA] border border-[#E9E6EF]">
+                  f/2.8
+                </span>
+              </div>
+            </div>
+
+            <!-- Interactive Lens Switcher Pills -->
+            <div id="lens-switcher-buttons" class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl bg-[#F7F6FA] border border-[#E9E6EF] mb-6">
+              <!-- Populated via JS -->
+            </div>
+
+            <!-- Interactive Animated Camera-Shutter Visualizer Core -->
+            <div class="relative rounded-2xl bg-[#F7F6FA] border border-[#E9E6EF] p-5 mb-5 overflow-hidden">
+              <!-- Viewfinder Corner Brackets -->
+              <div class="absolute top-3 left-3 w-3.5 h-3.5 border-t-2 border-l-2 border-[#7138E8]/50"></div>
+              <div class="absolute top-3 right-3 w-3.5 h-3.5 border-t-2 border-r-2 border-[#7138E8]/50"></div>
+              <div class="absolute bottom-3 left-3 w-3.5 h-3.5 border-b-2 border-l-2 border-[#7138E8]/50"></div>
+              <div class="absolute bottom-3 right-3 w-3.5 h-3.5 border-b-2 border-r-2 border-[#7138E8]/50"></div>
+
+              <div class="flex flex-col sm:flex-row items-center gap-5">
+                <!-- Interactive Rotating 6-Blade Shutter Aperture Dial -->
+                <div class="relative w-32 h-32 shrink-0 flex items-center justify-center">
+                  <svg
+                    id="hero-shutter-svg"
+                    viewBox="0 0 200 200"
+                    class="w-full h-full transition-transform duration-700 ease-out"
+                    style="transform: rotate(22.4deg);"
+                  >
+                    <defs>
+                      <linearGradient id="hero-aperture-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#7138E8" />
+                        <stop offset="50%" stop-color="#5125B8" />
+                        <stop offset="100%" stop-color="#D946EF" />
+                      </linearGradient>
+                    </defs>
+                    <circle cx="100" cy="100" r="92" fill="white" stroke="#E9E6EF" stroke-width="3" />
+                    <!-- 6 Dynamic Shutter Blades -->
+                    <g transform="rotate(0 100 100)">
+                      <path d="M100 14 C134 14, 164 34, 176 66 L116 86 C108 62, 102 38, 100 14 Z" fill="url(#hero-aperture-grad)" fill-opacity="0.86" stroke="#FFFFFF" stroke-width="2" />
+                    </g>
+                    <g transform="rotate(60 100 100)">
+                      <path d="M100 14 C134 14, 164 34, 176 66 L116 86 C108 62, 102 38, 100 14 Z" fill="url(#hero-aperture-grad)" fill-opacity="0.86" stroke="#FFFFFF" stroke-width="2" />
+                    </g>
+                    <g transform="rotate(120 100 100)">
+                      <path d="M100 14 C134 14, 164 34, 176 66 L116 86 C108 62, 102 38, 100 14 Z" fill="url(#hero-aperture-grad)" fill-opacity="0.86" stroke="#FFFFFF" stroke-width="2" />
+                    </g>
+                    <g transform="rotate(180 100 100)">
+                      <path d="M100 14 C134 14, 164 34, 176 66 L116 86 C108 62, 102 38, 100 14 Z" fill="url(#hero-aperture-grad)" fill-opacity="0.86" stroke="#FFFFFF" stroke-width="2" />
+                    </g>
+                    <g transform="rotate(240 100 100)">
+                      <path d="M100 14 C134 14, 164 34, 176 66 L116 86 C108 62, 102 38, 100 14 Z" fill="url(#hero-aperture-grad)" fill-opacity="0.86" stroke="#FFFFFF" stroke-width="2" />
+                    </g>
+                    <g transform="rotate(300 100 100)">
+                      <path d="M100 14 C134 14, 164 34, 176 66 L116 86 C108 62, 102 38, 100 14 Z" fill="url(#hero-aperture-grad)" fill-opacity="0.86" stroke="#FFFFFF" stroke-width="2" />
+                    </g>
+                    <circle
+                      id="hero-shutter-inner-circle"
+                      cx="100"
+                      cy="100"
+                      r="37.6"
+                      fill="#FFFFFF"
+                      stroke="#25232B"
+                      stroke-width="2.5"
+                      class="transition-all duration-500"
+                    />
+                  </svg>
+                  <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <span id="hero-shutter-center-label" class="font-mono-tech text-[11px] font-bold text-[#25232B]">
+                      BRAND
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Active Lens Telemetry Info -->
+                <div class="flex-1 text-center sm:text-left">
+                  <div id="lens-name-display" class="text-xs font-semibold uppercase tracking-wider text-[#7138E8] mb-1">
+                    Brand Identity &amp; Positioning
+                  </div>
+                  <h2 id="lens-headline-display" class="font-display text-lg font-bold text-[#25232B] leading-snug mb-2">
+                    Category-Defining Visual Systems
+                  </h2>
+                  <p id="lens-desc-display" class="text-xs text-[#777481] leading-relaxed">
+                    We distill complex value propositions into unmistakable visual identities, verbal frameworks, and design systems that command premium market pricing.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Interactive Aperture Focus Slider -->
+              <div class="mt-4 pt-3 border-t border-[#E9E6EF] flex items-center justify-between gap-3">
+                <span class="font-mono-tech text-[11px] text-[#777481]">
+                  SHUTTER APERTURE:
+                </span>
+                <input
+                  id="aperture-slider"
+                  type="range"
+                  min="1.4"
+                  max="8.0"
+                  step="0.2"
+                  value="2.8"
+                  aria-label="Adjust Camera Shutter Aperture"
+                  class="w-36 accent-[#7138E8] cursor-pointer h-1.5 bg-[#E9E6EF] rounded-lg"
+                />
+                <span id="aperture-slider-value" class="font-mono-tech text-[11px] font-semibold text-[#25232B]">
+                  f/2.8
+                </span>
+              </div>
+            </div>
+
+            <!-- Live Verified Metrics Pair -->
+            <div class="grid grid-cols-2 gap-3 mb-4">
+              <div class="p-3.5 rounded-2xl bg-[#F7F6FA] border border-[#E9E6EF]">
+                <div id="lens-metric1-val" class="font-display text-2xl font-extrabold bg-gradient-to-r from-[#7138E8] to-[#D946EF] bg-clip-text text-transparent">
+                  +240%
+                </div>
+                <div id="lens-metric1-label" class="text-xs text-[#777481] font-medium mt-0.5">
+                  Brand Search Volume Lift
+                </div>
+              </div>
+              <div class="p-3.5 rounded-2xl bg-[#F7F6FA] border border-[#E9E6EF]">
+                <div id="lens-metric2-val" class="font-display text-2xl font-extrabold text-[#25232B]">
+                  99.2%
+                </div>
+                <div id="lens-metric2-label" class="text-xs text-[#777481] font-medium mt-0.5">
+                  Design System Consistency
+                </div>
+              </div>
+            </div>
+
+            <!-- Deliverable Tags -->
+            <div id="lens-tags-container" class="flex flex-wrap gap-1.5">
+              <!-- Populated via JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Client / Industry Credibility Bar -->
+      <div class="mt-16 pt-10 border-t border-[#E9E6EF]">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <p class="text-xs font-mono-tech uppercase tracking-widest text-[#777481]">
+            TRUSTED BY CATEGORY LEADERS ACROSS SAAS, FINTECH, AI &amp; MODERN COMMERCE
+          </p>
+          <div class="flex flex-wrap items-center gap-6 sm:gap-10 opacity-85">
+            <div class="flex items-center gap-2 group">
+              <span class="w-2 h-2 rounded-full bg-[#7138E8]/60 group-hover:bg-[#D946EF] transition-colors"></span>
+              <span class="font-display text-sm font-bold tracking-wider text-[#25232B]">VELOCE.AI</span>
+              <span class="text-[10px] font-mono-tech px-1.5 py-0.5 rounded bg-[#F7F6FA] text-[#777481] border border-[#E9E6EF]">SERIES B</span>
+            </div>
+            <div class="flex items-center gap-2 group">
+              <span class="w-2 h-2 rounded-full bg-[#7138E8]/60 group-hover:bg-[#D946EF] transition-colors"></span>
+              <span class="font-display text-sm font-bold tracking-wider text-[#25232B]">LUMINA DERM</span>
+              <span class="text-[10px] font-mono-tech px-1.5 py-0.5 rounded bg-[#F7F6FA] text-[#777481] border border-[#E9E6EF]">DTC LUXURY</span>
+            </div>
+            <div class="flex items-center gap-2 group">
+              <span class="w-2 h-2 rounded-full bg-[#7138E8]/60 group-hover:bg-[#D946EF] transition-colors"></span>
+              <span class="font-display text-sm font-bold tracking-wider text-[#25232B]">KINETIX</span>
+              <span class="text-[10px] font-mono-tech px-1.5 py-0.5 rounded bg-[#F7F6FA] text-[#777481] border border-[#E9E6EF]">FINTECH</span>
+            </div>
+            <div class="flex items-center gap-2 group">
+              <span class="w-2 h-2 rounded-full bg-[#7138E8]/60 group-hover:bg-[#D946EF] transition-colors"></span>
+              <span class="font-display text-sm font-bold tracking-wider text-[#25232B]">AETHER MOBILITY</span>
+              <span class="text-[10px] font-mono-tech px-1.5 py-0.5 rounded bg-[#F7F6FA] text-[#777481] border border-[#E9E6EF]">HARDWARE</span>
+            </div>
+            <div class="flex items-center gap-2 group">
+              <span class="w-2 h-2 rounded-full bg-[#7138E8]/60 group-hover:bg-[#D946EF] transition-colors"></span>
+              <span class="font-display text-sm font-bold tracking-wider text-[#25232B]">SYNTHESIS CLOUD</span>
+              <span class="text-[10px] font-mono-tech px-1.5 py-0.5 rounded bg-[#F7F6FA] text-[#777481] border border-[#E9E6EF]">ENTERPRISE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. FULL-SPECTRUM SERVICES & CAPABILITIES (ASYMMETRIC BENTO + INSPECTOR)
+       ========================================================================= -->
+  <section id="services" class="py-24 lg:py-32 bg-[#FFFFFF] relative overflow-hidden">
+    <!-- Decorative Shutter Geometric Motif Watermark -->
+    <svg
+      viewBox="0 0 200 200"
+      fill="none"
+      class="pointer-events-none select-none transition-transform duration-700 absolute -right-20 top-16 w-96 h-96"
+      style="opacity: 0.04;"
+    >
+      <circle cx="100" cy="100" r="92" stroke="#7138E8" stroke-width="1.5" stroke-dasharray="4 6" />
+      <circle cx="100" cy="100" r="68" stroke="#5125B8" stroke-width="1.2" />
+      <path d="M100 8 L138 68 L62 68 Z" stroke="#7138E8" stroke-width="1.5" />
+      <path d="M180 54 L138 120 L100 54 Z" stroke="#D946EF" stroke-width="1.5" />
+      <path d="M180 146 L100 146 L138 80 Z" stroke="#7138E8" stroke-width="1.5" />
+      <path d="M100 192 L62 132 L138 132 Z" stroke="#5125B8" stroke-width="1.5" />
+      <path d="M20 146 L62 80 L100 146 Z" stroke="#D946EF" stroke-width="1.5" />
+      <path d="M20 54 L100 54 L62 120 Z" stroke="#7138E8" stroke-width="1.5" />
+    </svg>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <!-- Editorial Section Header -->
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-16">
+        <div class="max-w-2xl">
+          <div class="inline-flex items-center gap-2 text-xs font-mono-tech uppercase tracking-widest text-[#7138E8] font-semibold mb-3">
+            <span>01 // CAPABILITIES &amp; CRAFT</span>
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#25232B] tracking-tight leading-[1.1]">
+            Six Disciplines. One Unified Growth Engine.
+          </h2>
+        </div>
+        <p class="text-base text-[#777481] max-w-md leading-relaxed">
+          Every engagement is custom-calibrated. Click any discipline below to inspect exact deliverables, timelines, and commercial impact.
+        </p>
+      </div>
+
+      <!-- Interactive Asymmetric Bento Grid + Live Deliverable Inspector -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <!-- Left 7 Columns: 6 Service Cards -->
+        <div id="services-cards-grid" class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <!-- Populated via JS -->
+        </div>
+
+        <!-- Right 5 Columns: Sticky Service Scope & Deliverable Inspector -->
+        <div class="lg:col-span-5 lg:sticky lg:top-28">
+          <div class="rounded-[32px] bg-[#F7F6FA] border border-[#E9E6EF] p-7 sm:p-8 shadow-sm relative overflow-hidden">
+            <div class="flex items-center justify-between gap-2 pb-5 mb-6 border-b border-[#E9E6EF]">
+              <div>
+                <span id="inspector-number" class="font-mono-tech text-xs uppercase tracking-wider text-[#7138E8] font-semibold">
+                  ACTIVE SPECIFICATION // 01
+                </span>
+                <h3 id="inspector-title" class="font-display text-2xl font-extrabold text-[#25232B] mt-1">
+                  Brand Strategy &amp; Identity Systems
+                </h3>
+              </div>
+              <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-[#7138E8] to-[#D946EF] flex items-center justify-center text-white shrink-0 shadow-md">
+                <i data-lucide="aperture" class="w-5 h-5"></i>
+              </div>
+            </div>
+
+            <!-- Key Metrics Pill Box -->
+            <div class="grid grid-cols-2 gap-3 mb-6">
+              <div class="p-3.5 rounded-2xl bg-white border border-[#E9E6EF]">
+                <div class="text-[11px] font-mono-tech uppercase text-[#777481]">
+                  TYPICAL TIMELINE
+                </div>
+                <div id="inspector-timeline" class="font-display text-base font-bold text-[#25232B] mt-0.5">
+                  4–6 Weeks
+                </div>
+              </div>
+              <div class="p-3.5 rounded-2xl bg-white border border-[#E9E6EF]">
+                <div class="text-[11px] font-mono-tech uppercase text-[#777481]">
+                  BENCHMARK OUTCOME
+                </div>
+                <div id="inspector-impact" class="font-display text-sm font-bold text-[#7138E8] mt-0.5">
+                  +185% Brand Recall &amp; Pricing Power
+                </div>
+              </div>
+            </div>
+
+            <!-- Included Deliverables Checklist -->
+            <div class="mb-7">
+              <div class="text-xs font-mono-tech uppercase tracking-wider text-[#25232B] font-semibold mb-3.5">
+                WHAT'S INCLUDED IN THIS PILLAR:
+              </div>
+              <ul id="inspector-deliverables" class="space-y-2.5">
+                <!-- Populated via JS -->
+              </ul>
+            </div>
+
+            <button
+              id="inspector-cta-btn"
+              type="button"
+              onclick="handleScopeActiveService();"
+              class="w-full py-4 px-6 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-[#7138E8] via-[#5125B8] to-[#D946EF] hover:opacity-95 shadow-[0_10px_28px_-6px_rgba(113,56,232,0.55)] flex items-center justify-center gap-2 transition-all"
+            >
+              <span id="inspector-cta-text">Scope “Brand Strategy &amp; Identity Systems” With Us</span>
+              <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. SELECTED WORK / CASE STUDIES ("THROUGH THE SHUTTRLY LENS")
+       ========================================================================= -->
+  <section id="work" class="py-24 lg:py-32 bg-[#F7F6FA] border-y border-[#E9E6EF] relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Header + Category Filter Pills -->
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
+        <div>
+          <div class="inline-flex items-center gap-2 text-xs font-mono-tech uppercase tracking-widest text-[#7138E8] font-semibold mb-3">
+            <span>02 // SELECTED CASE STUDIES</span>
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#25232B] tracking-tight">
+            Through The Shuttrly Lens.
+          </h2>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div id="work-filter-tabs" class="flex flex-wrap gap-2">
+          <!-- Populated via JS -->
+        </div>
+      </div>
+
+      <!-- Case Study Editorial Cards Grid -->
+      <div id="case-studies-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Populated via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       7. THE SHUTTRLY GROWTH LAB (INTERACTIVE ROI & PIPELINE SIMULATOR)
+       ========================================================================= -->
+  <section id="growth-lab" class="py-24 lg:py-32 bg-[#FFFFFF] relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-14">
+        <div class="inline-flex items-center gap-2 text-xs font-mono-tech uppercase tracking-widest text-[#7138E8] font-semibold mb-3">
+          <span>03 // INTERACTIVE ROI &amp; PIPELINE SIMULATOR</span>
+        </div>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#25232B] tracking-tight">
+          The Shuttrly Growth Lab.
+        </h2>
+        <p class="text-base sm:text-lg text-[#777481] mt-3 leading-relaxed">
+          Model how compound improvements across traffic acquisition, brand authority, and conversion rate optimization impact your 6-month pipeline.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        <!-- Left 6 Cols: Interactive Sliders & Engagement Mode -->
+        <div class="lg:col-span-6 rounded-[32px] bg-[#F7F6FA] border border-[#E9E6EF] p-6 sm:p-8 flex flex-col justify-between space-y-6">
+          <div>
+            <div class="text-xs font-mono-tech uppercase tracking-wider text-[#25232B] font-semibold mb-3">
+              1. SELECT PRIMARY ENGAGEMENT LENS
+            </div>
+            <div id="growth-mode-buttons" class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+              <!-- Populated via JS -->
+            </div>
+          </div>
+
+          <!-- Slider 1: Monthly Growth Budget -->
+          <div class="p-4 rounded-2xl bg-white border border-[#E9E6EF]">
+            <div class="flex justify-between items-center mb-2">
+              <label for="slider-budget" class="text-xs font-semibold text-[#25232B]">
+                Monthly Growth &amp; Media Investment
+              </label>
+              <span id="slider-budget-label" class="font-mono-tech text-sm font-bold text-[#7138E8]">
+                $15,000/mo
+              </span>
+            </div>
+            <input
+              id="slider-budget"
+              type="range"
+              min="5000"
+              max="75000"
+              step="2500"
+              value="15000"
+              class="w-full accent-[#7138E8] cursor-pointer h-1.5 bg-[#E9E6EF] rounded-lg"
+            />
+            <div class="flex justify-between text-[11px] text-[#777481] mt-1">
+              <span>$5,000/mo</span>
+              <span>$35,000/mo</span>
+              <span>$75,000/mo</span>
+            </div>
+          </div>
+
+          <!-- Slider 2: Current Monthly Website Visitors -->
+          <div class="p-4 rounded-2xl bg-white border border-[#E9E6EF]">
+            <div class="flex justify-between items-center mb-2">
+              <label for="slider-visitors" class="text-xs font-semibold text-[#25232B]">
+                Current Monthly Website Visitors
+              </label>
+              <span id="slider-visitors-label" class="font-mono-tech text-sm font-bold text-[#25232B]">
+                35,000 visits
+              </span>
+            </div>
+            <input
+              id="slider-visitors"
+              type="range"
+              min="5000"
+              max="200000"
+              step="5000"
+              value="35000"
+              class="w-full accent-[#7138E8] cursor-pointer h-1.5 bg-[#E9E6EF] rounded-lg"
+            />
+            <div class="flex justify-between text-[11px] text-[#777481] mt-1">
+              <span>5k</span>
+              <span>100k</span>
+              <span>200k+</span>
+            </div>
+          </div>
+
+          <!-- Slider 3: Current Conversion Rate -->
+          <div class="p-4 rounded-2xl bg-white border border-[#E9E6EF]">
+            <div class="flex justify-between items-center mb-2">
+              <label for="slider-cvr" class="text-xs font-semibold text-[#25232B]">
+                Current Website Conversion Rate (%)
+              </label>
+              <span id="slider-cvr-label" class="font-mono-tech text-sm font-bold text-[#25232B]">
+                1.4%
+              </span>
+            </div>
+            <input
+              id="slider-cvr"
+              type="range"
+              min="0.4"
+              max="5.0"
+              step="0.2"
+              value="1.4"
+              class="w-full accent-[#7138E8] cursor-pointer h-1.5 bg-[#E9E6EF] rounded-lg"
+            />
+            <div class="flex justify-between text-[11px] text-[#777481] mt-1">
+              <span>0.4%</span>
+              <span>2.5%</span>
+              <span>5.0%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 6 Cols: Projected Telemetry Output Card -->
+        <div class="lg:col-span-6 rounded-[32px] bg-[#25232B] text-white p-7 sm:p-9 flex flex-col justify-between relative overflow-hidden shadow-xl">
+          <div
+            class="pointer-events-none absolute -top-24 -right-24 w-80 h-80 rounded-full blur-3xl opacity-30"
+            style="background: radial-gradient(circle, #D946EF 0%, #7138E8 60%, transparent 100%);"
+          ></div>
+
+          <div class="relative z-10">
+            <div class="flex items-center justify-between gap-2 pb-5 mb-6 border-b border-white/15">
+              <div>
+                <span class="font-mono-tech text-[11px] uppercase tracking-widest text-[#D946EF]">
+                  SHUTTRLY 6-MONTH PROJECTION
+                </span>
+                <h3 id="roi-tier-title" class="font-display text-xl sm:text-2xl font-bold mt-1">
+                  Complete Shuttrly Growth Partnership
+                </h3>
+              </div>
+              <span id="roi-roas-badge" class="px-3 py-1 rounded-full text-xs font-mono-tech font-semibold bg-white/10 text-white border border-white/15">
+                Est. 8.4x ROAS
+              </span>
+            </div>
+
+            <!-- Big Pipeline Forecast Number -->
+            <div class="p-6 rounded-3xl bg-white/5 border border-white/10 mb-6">
+              <div class="text-xs font-mono-tech uppercase tracking-wider text-white/70">
+                ESTIMATED 6-MONTH ATTRIBUTED PIPELINE / REVENUE LIFT
+              </div>
+              <div id="roi-pipeline-number" class="font-display text-4xl sm:text-5xl font-extrabold mt-2 bg-gradient-to-r from-white via-[#F5D0FE] to-[#D946EF] bg-clip-text text-transparent">
+                +$3,417,680
+              </div>
+              <div class="text-xs text-white/70 mt-2">
+                Based on Shuttrly median client conversion &amp; acquisition benchmarks
+              </div>
+            </div>
+
+            <!-- 3 Supporting Metrics -->
+            <div class="grid grid-cols-3 gap-3 mb-8">
+              <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+                <div class="text-[11px] text-white/60">Projected Monthly Traffic</div>
+                <div id="roi-proj-visitors" class="font-display text-xl font-bold mt-1">
+                  92,750
+                </div>
+              </div>
+              <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+                <div class="text-[11px] text-white/60">Projected Target CVR</div>
+                <div id="roi-proj-cvr" class="font-display text-xl font-bold text-[#D946EF] mt-1">
+                  3.01%
+                </div>
+              </div>
+              <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+                <div class="text-[11px] text-white/60">Qualified Leads / Mo</div>
+                <div id="roi-proj-leads" class="font-display text-xl font-bold text-emerald-400 mt-1">
+                  2,792
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative z-10 pt-4 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="text-xs text-white/75">
+              Ready to validate these numbers for your domain?
+            </div>
+            <button
+              type="button"
+              onclick="handleApplyRoiToEnquiry();"
+              class="w-full sm:w-auto px-6 py-3.5 rounded-full text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-[#7138E8] to-[#D946EF] hover:opacity-95 flex items-center justify-center gap-2 shadow-lg shrink-0"
+            >
+              <span>Lock In Custom Growth Audit</span>
+              <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       8. THE 4-STAGE SHUTTRLY PROCESS ("FROM APERTURE TO SCALE")
+       ========================================================================= -->
+  <section id="process" class="py-24 lg:py-32 bg-[#F7F6FA] border-y border-[#E9E6EF] relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14">
+        <div>
+          <div class="inline-flex items-center gap-2 text-xs font-mono-tech uppercase tracking-widest text-[#7138E8] font-semibold mb-3">
+            <span>04 // HOW WE OPERATE</span>
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#25232B] tracking-tight">
+            From Aperture to Scale.
+          </h2>
+        </div>
+        <p class="text-base text-[#777481] max-w-md">
+          A transparent, senior-led methodology engineered for rapid time-to-value and compounding commercial return.
+        </p>
+      </div>
+
+      <!-- Interactive 4-Step Selector Grid -->
+      <div id="process-steps-tabs" class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+        <!-- Populated via JS -->
+      </div>
+
+      <!-- Active Process Step Spotlight Card -->
+      <div class="rounded-[32px] bg-white border border-[#E9E6EF] p-7 sm:p-10 shadow-sm">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-6 space-y-4">
+            <div class="inline-flex items-center gap-2 font-mono-tech text-xs font-semibold text-[#7138E8] bg-[#F7F6FA] px-3 py-1 rounded-full border border-[#E9E6EF]">
+              <i data-lucide="aperture" class="w-3.5 h-3.5"></i>
+              <span id="process-lens-spec">F/1.4 // CALIBRATE</span>
+            </div>
+            <h3 id="process-title" class="font-display text-2xl sm:text-3xl font-extrabold text-[#25232B]">
+              01. Diagnostic Audit &amp; Strategic Calibration
+            </h3>
+            <p id="process-summary" class="text-base text-[#777481] leading-relaxed">
+              Before designing a pixel or spending a dollar on media, we dissect your unit economics, competitive landscape, buyer psychology, and technical funnel leakage.
+            </p>
+            <div class="p-4 rounded-2xl bg-[#F7F6FA] border border-[#E9E6EF]">
+              <div class="text-[11px] font-mono-tech uppercase text-[#777481]">
+                PRIMARY TELEMETRY BENCHMARK
+              </div>
+              <div id="process-kpi" class="text-sm font-bold text-[#25232B] mt-0.5">
+                Baseline CAC, LTV, Funnel Drop-Off &amp; Opportunity Sizing
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6">
+            <div class="p-6 rounded-3xl bg-[#F7F6FA] border border-[#E9E6EF]">
+              <div id="process-deliverables-heading" class="text-xs font-mono-tech uppercase tracking-wider text-[#25232B] font-semibold mb-4">
+                PHASE 01 KEY DELIVERABLES:
+              </div>
+              <div id="process-deliverables-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <!-- Populated via JS -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       9. WHY SHUTTRLY (COMPARISON MATRIX + CLIENT TESTIMONIALS)
+       ========================================================================= -->
+  <section id="why-shuttrly" class="py-24 lg:py-32 bg-[#FFFFFF]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 text-xs font-mono-tech uppercase tracking-widest text-[#7138E8] font-semibold mb-3">
+          <span>05 // THE SHUTTRLY ADVANTAGE</span>
+        </div>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#25232B] tracking-tight">
+          Why Ambitious Brands Switch to Shuttrly.
+        </h2>
+        <p class="text-base text-[#777481] mt-3">
+          We eliminated the bloated account hierarchies and disconnected silos of legacy agencies.
+        </p>
+      </div>
+
+      <!-- Editorial Comparison Table -->
+      <div class="overflow-x-auto rounded-[32px] border border-[#E9E6EF] shadow-sm mb-20">
+        <table class="w-full text-left border-collapse bg-white">
+          <thead>
+            <tr class="border-b border-[#E9E6EF] bg-[#F7F6FA]">
+              <th class="py-5 px-6 text-xs font-mono-tech uppercase tracking-wider text-[#777481]">
+                Evaluation Dimension
+              </th>
+              <th class="py-5 px-6 text-sm font-display font-extrabold text-[#7138E8] bg-[#7138E8]/5 border-x border-[#E9E6EF]">
+                Shuttrly Growth Partner
+              </th>
+              <th class="py-5 px-6 text-xs font-mono-tech uppercase tracking-wider text-[#777481]">
+                Traditional Agencies
+              </th>
+              <th class="py-5 px-6 text-xs font-mono-tech uppercase tracking-wider text-[#777481]">
+                Fragmented Freelancers
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-[#E9E6EF] text-sm">
+            <tr class="hover:bg-[#F7F6FA]/50 transition-colors">
+              <td class="py-4 px-6 font-semibold text-[#25232B]">Creative &amp; Conversion Synergy</td>
+              <td class="py-4 px-6 font-semibold text-[#25232B] bg-[#7138E8]/5 border-x border-[#E9E6EF]">
+                <div class="flex items-start gap-2">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-[#7138E8] shrink-0 mt-0.5"></i>
+                  <span>Studio-grade design engineered specifically for pipeline &amp; ROAS</span>
+                </div>
+              </td>
+              <td class="py-4 px-6 text-[#777481]">Siloed creative &amp; media teams with conflicting KPIs</td>
+              <td class="py-4 px-6 text-[#777481]">Disconnected visual assets with no conversion architecture</td>
+            </tr>
+            <tr class="hover:bg-[#F7F6FA]/50 transition-colors">
+              <td class="py-4 px-6 font-semibold text-[#25232B]">Team Seniority</td>
+              <td class="py-4 px-6 font-semibold text-[#25232B] bg-[#7138E8]/5 border-x border-[#E9E6EF]">
+                <div class="flex items-start gap-2">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-[#7138E8] shrink-0 mt-0.5"></i>
+                  <span>Direct access to senior principals across brand, code &amp; growth</span>
+                </div>
+              </td>
+              <td class="py-4 px-6 text-[#777481]">Pitched by partners, handed off to junior account coordinators</td>
+              <td class="py-4 px-6 text-[#777481]">Single-skill bottleneck; lacks full-stack execution</td>
+            </tr>
+            <tr class="hover:bg-[#F7F6FA]/50 transition-colors">
+              <td class="py-4 px-6 font-semibold text-[#25232B]">Speed &amp; Sprint Cadence</td>
+              <td class="py-4 px-6 font-semibold text-[#25232B] bg-[#7138E8]/5 border-x border-[#E9E6EF]">
+                <div class="flex items-start gap-2">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-[#7138E8] shrink-0 mt-0.5"></i>
+                  <span>Weekly creative &amp; CRO shipments with live Slack collaboration</span>
+                </div>
+              </td>
+              <td class="py-4 px-6 text-[#777481]">Slow 6-week approval chains and bloated status meetings</td>
+              <td class="py-4 px-6 text-[#777481]">Unpredictable availability and missed launch windows</td>
+            </tr>
+            <tr class="hover:bg-[#F7F6FA]/50 transition-colors">
+              <td class="py-4 px-6 font-semibold text-[#25232B]">Attribution &amp; Reporting</td>
+              <td class="py-4 px-6 font-semibold text-[#25232B] bg-[#7138E8]/5 border-x border-[#E9E6EF]">
+                <div class="flex items-start gap-2">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-[#7138E8] shrink-0 mt-0.5"></i>
+                  <span>Real-time Executive Telemetry tied to CRM pipeline &amp; net margin</span>
+                </div>
+              </td>
+              <td class="py-4 px-6 text-[#777481]">Monthly vanity PDF decks focused on impressions &amp; clicks</td>
+              <td class="py-4 px-6 text-[#777481]">Minimal or no technical tracking setup</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Executive Testimonials Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-7 rounded-3xl bg-[#F7F6FA] border border-[#E9E6EF] flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-5">
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-white text-[#7138E8] border border-[#E9E6EF]">
+                +318% Enterprise Pipeline
+              </span>
+              <span class="text-xs font-mono-tech text-[#777481]">Web &amp; Brand</span>
+            </div>
+            <p class="text-sm sm:text-base text-[#25232B] leading-relaxed font-medium mb-6">
+              “Shuttrly is the rare partner that operates with the taste level of an elite boutique design studio and the commercial rigor of a quantitative growth team. Our inbound pipeline tripled within four months.”
+            </p>
+          </div>
+          <div class="pt-4 border-t border-[#E9E6EF]">
+            <div class="font-display text-sm font-bold text-[#25232B]">Elena Rostova</div>
+            <div class="text-xs text-[#777481]">Chief Marketing Officer, Veloce Cloud AI</div>
+          </div>
+        </div>
+
+        <div class="p-7 rounded-3xl bg-[#F7F6FA] border border-[#E9E6EF] flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-5">
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-white text-[#7138E8] border border-[#E9E6EF]">
+                4.6x Blended ROAS
+              </span>
+              <span class="text-xs font-mono-tech text-[#777481]">Performance</span>
+            </div>
+            <p class="text-sm sm:text-base text-[#25232B] leading-relaxed font-medium mb-6">
+              “We interviewed 11 agencies before choosing Shuttrly. Their Dynamic Island-level attention to interactive craft and their ruthless focus on contribution margin helped us scale past $9M ARR profitably.”
+            </p>
+          </div>
+          <div class="pt-4 border-t border-[#E9E6EF]">
+            <div class="font-display text-sm font-bold text-[#25232B]">Marcus Vance</div>
+            <div class="text-xs text-[#777481]">Founder &amp; CEO, Lumina Dermaceuticals</div>
+          </div>
+        </div>
+
+        <div class="p-7 rounded-3xl bg-[#F7F6FA] border border-[#E9E6EF] flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-5">
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-white text-[#7138E8] border border-[#E9E6EF]">
+                +275% Organic Signups
+              </span>
+              <span class="text-xs font-mono-tech text-[#777481]">SEO &amp; Identity</span>
+            </div>
+            <p class="text-sm sm:text-base text-[#25232B] leading-relaxed font-medium mb-6">
+              “From our brand identity overhaul to our programmatic SEO engine, every deliverable from Shuttrly felt custom-engineered. They completely transformed how enterprise CFOs perceive our platform.”
+            </p>
+          </div>
+          <div class="pt-4 border-t border-[#E9E6EF]">
+            <div class="font-display text-sm font-bold text-[#25232B]">David Chen</div>
+            <div class="text-xs text-[#777481]">VP of Growth, Kinetix Treasury</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       10. FAQ ACCORDION SECTION
+       ========================================================================= -->
+  <section id="faq" class="py-20 lg:py-28 bg-[#F7F6FA] border-t border-[#E9E6EF]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center gap-2 text-xs font-mono-tech uppercase tracking-widest text-[#7138E8] font-semibold mb-3">
+          <span>06 // FREQUENTLY ASKED QUESTIONS</span>
+        </div>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-[#25232B]">
+          Clarity Before We Collaborate.
+        </h2>
+      </div>
+
+      <div id="faq-accordion-container" class="space-y-3">
+        <!-- Populated via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       11. CONVERSION-OPTIMIZED PROJECT ENQUIRY SECTION ("LET'S TALK")
+       ========================================================================= -->
+  <section id="contact" class="py-24 lg:py-32 bg-[#FFFFFF] border-t border-[#E9E6EF] relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <!-- Left 5 Columns: Direct Strategy Call Value Prop & Contact Info -->
+        <div class="lg:col-span-5 space-y-8">
+          <div>
+            <div class="inline-flex items-center gap-2 text-xs font-mono-tech uppercase tracking-widest text-[#7138E8] font-semibold mb-3">
+              <span>07 // START YOUR PROJECT</span>
+            </div>
+            <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#25232B] tracking-tight leading-[1.08]">
+              Ready to Put Your Growth in Focus?
+            </h2>
+            <p class="text-base text-[#777481] mt-4 leading-relaxed">
+              Tell us where you want to take your brand. Within 24 hours, our senior partners will prepare a tailored diagnostic audit and roadmap for your domain.
+            </p>
+          </div>
+
+          <!-- What Happens Next Steps -->
+          <div class="p-6 rounded-3xl bg-[#F7F6FA] border border-[#E9E6EF] space-y-4">
+            <div class="text-xs font-mono-tech uppercase tracking-wider text-[#25232B] font-semibold">
+              WHAT HAPPENS AFTER YOU SUBMIT:
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="font-mono-tech text-xs font-bold px-2 py-0.5 rounded bg-white text-[#7138E8] border border-[#E9E6EF] mt-0.5">01</span>
+              <div>
+                <div class="text-sm font-bold text-[#25232B]">Custom Teardown Within 24 Hours</div>
+                <div class="text-xs text-[#777481] mt-0.5">A senior Shuttrly strategist audits your current site, brand positioning, and ad funnel.</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="font-mono-tech text-xs font-bold px-2 py-0.5 rounded bg-white text-[#7138E8] border border-[#E9E6EF] mt-0.5">02</span>
+              <div>
+                <div class="text-sm font-bold text-[#25232B]">30-Minute Executive Discovery Call</div>
+                <div class="text-xs text-[#777481] mt-0.5">No fluff pitch decks—we walk through live opportunities, benchmarks, and quick wins.</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="font-mono-tech text-xs font-bold px-2 py-0.5 rounded bg-white text-[#7138E8] border border-[#E9E6EF] mt-0.5">03</span>
+              <div>
+                <div class="text-sm font-bold text-[#25232B]">Tailored Scope &amp; 90-Day Roadmap</div>
+                <div class="text-xs text-[#777481] mt-0.5">Clear deliverables, fixed timelines, and transparent investment tiers.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct Contact Channels -->
+          <div class="space-y-3 pt-2">
+            <div class="flex items-center gap-3 text-sm text-[#25232B]">
+              <div class="w-9 h-9 rounded-full bg-[#F7F6FA] border border-[#E9E6EF] flex items-center justify-center text-[#7138E8]">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <div class="text-xs text-[#777481]">Direct New Business Desk</div>
+                <a href="mailto:hello@shuttrly.com" class="font-semibold hover:text-[#7138E8] transition-colors">
+                  hello@shuttrly.com
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 text-sm text-[#25232B]">
+              <div class="w-9 h-9 rounded-full bg-[#F7F6FA] border border-[#E9E6EF] flex items-center justify-center text-[#7138E8]">
+                <i data-lucide="globe" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <div class="text-xs text-[#777481]">Official Domain</div>
+                <span class="font-semibold">shuttrly.com — Global Digital Agency</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 7 Columns: Interactive Project Configurator Form -->
+        <div class="lg:col-span-7">
+          <div class="rounded-[32px] bg-[#F7F6FA] border border-[#E9E6EF] p-6 sm:p-10 shadow-sm">
+            <!-- Confirmation State (Hidden until submitted) -->
+            <div id="enquiry-confirmation" class="hidden py-8 text-center space-y-5">
+              <div class="w-16 h-16 rounded-full bg-gradient-to-br from-[#7138E8] to-[#D946EF] text-white flex items-center justify-center mx-auto shadow-lg">
+                <i data-lucide="check" class="w-8 h-8"></i>
+              </div>
+              <div id="confirm-ref-badge" class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[#E9E6EF] text-xs font-mono-tech text-[#7138E8]">
+                ENQUIRY CONFIRMED // REF #849201
+              </div>
+              <h3 id="confirm-heading" class="font-display text-2xl sm:text-3xl font-extrabold text-[#25232B]">
+                Thank You. We're On It.
+              </h3>
+              <p id="confirm-message" class="text-sm sm:text-base text-[#777481] max-w-lg mx-auto"></p>
+              <div class="p-5 rounded-2xl bg-white border border-[#E9E6EF] text-left max-w-lg mx-auto text-xs space-y-2">
+                <div class="font-mono-tech uppercase text-[#777481]">BRIEF SUMMARY:</div>
+                <div>
+                  <strong class="text-[#25232B]">Selected Services:</strong>
+                  <span id="confirm-services-list"></span>
+                </div>
+                <div>
+                  <strong class="text-[#25232B]">Estimated Budget:</strong>
+                  <span id="confirm-budget"></span> •
+                  <strong class="text-[#25232B]">Timeline:</strong>
+                  <span id="confirm-timeline"></span>
+                </div>
+              </div>
+              <button
+                type="button"
+                onclick="resetEnquiryForm();"
+                class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs font-semibold text-[#25232B] bg-white border border-[#E9E6EF] hover:border-[#7138E8]"
+              >
+                <span>Submit Another Enquiry</span>
+              </button>
+            </div>
+
+            <!-- Interactive Form -->
+            <form id="enquiry-form" onsubmit="handleFormSubmit(event);" class="space-y-6" novalidate>
+              <!-- Service Selection Pills -->
+              <div>
+                <label class="block text-xs font-mono-tech uppercase tracking-wider text-[#25232B] font-semibold mb-3">
+                  1. WHAT CAN SHUTTRLY HELP YOU BUILD OR SCALE? (SELECT ALL THAT APPLY)
+                </label>
+                <div id="form-service-pills" class="flex flex-wrap gap-2">
+                  <!-- Populated via JS -->
+                </div>
+              </div>
+
+              <!-- Budget & Timeline Selectors -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-mono-tech uppercase tracking-wider text-[#25232B] font-semibold mb-2">
+                    2. ESTIMATED INVESTMENT RANGE
+                  </label>
+                  <div id="form-budget-buttons" class="grid grid-cols-2 gap-2">
+                    <!-- Populated via JS -->
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-mono-tech uppercase tracking-wider text-[#25232B] font-semibold mb-2">
+                    3. TARGET TIMELINE
+                  </label>
+                  <div id="form-timeline-buttons" class="grid grid-cols-2 gap-2">
+                    <!-- Populated via JS -->
+                  </div>
+                </div>
+              </div>
+
+              <!-- Contact Inputs -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="input-name" class="block text-xs font-semibold text-[#25232B] mb-1.5">
+                    Your Full Name *
+                  </label>
+                  <input
+                    id="input-name"
+                    type="text"
+                    placeholder="Alex Morgan"
+                    class="w-full px-4 py-3 rounded-2xl bg-white border border-[#E9E6EF] text-sm text-[#25232B] focus:outline-none focus:ring-2 focus:ring-[#7138E8]"
+                  />
+                  <p id="error-name" class="hidden text-xs text-rose-600 mt-1">Please enter your name</p>
+                </div>
+
+                <div>
+                  <label for="input-email" class="block text-xs font-semibold text-[#25232B] mb-1.5">
+                    Work Email *
+                  </label>
+                  <input
+                    id="input-email"
+                    type="email"
+                    placeholder="alex@company.com"
+                    class="w-full px-4 py-3 rounded-2xl bg-white border border-[#E9E6EF] text-sm text-[#25232B] focus:outline-none focus:ring-2 focus:ring-[#7138E8]"
+                  />
+                  <p id="error-email" class="hidden text-xs text-rose-600 mt-1">Please enter a valid work email</p>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="input-company" class="block text-xs font-semibold text-[#25232B] mb-1.5">
+                    Company / Brand Name *
+                  </label>
+                  <input
+                    id="input-company"
+                    type="text"
+                    placeholder="Acme Technologies"
+                    class="w-full px-4 py-3 rounded-2xl bg-white border border-[#E9E6EF] text-sm text-[#25232B] focus:outline-none focus:ring-2 focus:ring-[#7138E8]"
+                  />
+                  <p id="error-company" class="hidden text-xs text-rose-600 mt-1">Please enter your company or brand name</p>
+                </div>
+
+                <div>
+                  <label for="input-website" class="block text-xs font-semibold text-[#25232B] mb-1.5">
+                    Current Website URL (Optional)
+                  </label>
+                  <input
+                    id="input-website"
+                    type="url"
+                    placeholder="https://yourcompany.com"
+                    class="w-full px-4 py-3 rounded-2xl bg-white border border-[#E9E6EF] text-sm text-[#25232B] focus:outline-none focus:ring-2 focus:ring-[#7138E8]"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label for="input-goals" class="block text-xs font-semibold text-[#25232B] mb-1.5">
+                  Project Context &amp; Growth Objectives
+                </label>
+                <textarea
+                  id="input-goals"
+                  rows="3"
+                  placeholder="Tell us about your target audience, growth targets, or current bottlenecks..."
+                  class="w-full px-4 py-3 rounded-2xl bg-white border border-[#E9E6EF] text-sm text-[#25232B] focus:outline-none focus:ring-2 focus:ring-[#7138E8]"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full py-4 px-8 rounded-full text-base font-semibold text-white bg-gradient-to-r from-[#7138E8] via-[#5125B8] to-[#D946EF] hover:opacity-95 shadow-[0_14px_34px_-8px_rgba(113,56,232,0.55)] flex items-center justify-center gap-2 transition-all"
+              >
+                <span>Request Your Custom Growth Roadmap ↗</span>
+              </button>
+
+              <p class="text-[11px] text-center text-[#777481]">
+                100% confidential. Protected by NDA upon request. Zero spam—direct response from Shuttrly senior partners.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       12. EDITORIAL FOOTER WITH EXACT SHUTTRLY BRAND LOCKUP
+       ========================================================================= -->
+  <footer class="bg-[#FFFFFF] border-t border-[#E9E6EF] pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-[#E9E6EF]">
+        <!-- Brand Column (5 Cols) -->
+        <div class="md:col-span-5 space-y-4">
+          <!-- Exact Shuttrly Logo (Large Size: 228x66) -->
+          <div
+            class="inline-flex items-center select-none shrink-0"
+            style="width: 228px; height: 66px;"
+            aria-label="Shuttrly Digital Marketing Agency"
+          >
+            <svg
+              viewBox="0 0 680 198"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-full h-full overflow-visible"
+              role="img"
+            >
+              <defs>
+                <linearGradient id="shutter-b1-footer" x1="42" y1="78" x2="115" y2="18" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#4A1FB8" />
+                  <stop offset="55%" stop-color="#7138E8" />
+                  <stop offset="100%" stop-color="#B845F5" />
+                </linearGradient>
+                <linearGradient id="shutter-b2-footer" x1="94" y1="68" x2="184" y2="30" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#7138E8" />
+                  <stop offset="55%" stop-color="#C84BF2" />
+                  <stop offset="100%" stop-color="#F5A3FF" />
+                </linearGradient>
+                <linearGradient id="shutter-b2-fold-footer" x1="120" y1="64" x2="178" y2="54" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#2E1075" />
+                  <stop offset="100%" stop-color="#5D26C9" />
+                </linearGradient>
+                <linearGradient id="shutter-b3-footer" x1="26" y1="62" x2="106" y2="122" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#9B51F5" />
+                  <stop offset="50%" stop-color="#5E27D4" />
+                  <stop offset="100%" stop-color="#351285" />
+                </linearGradient>
+                <linearGradient id="shutter-b4-footer" x1="108" y1="84" x2="182" y2="154" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#3D1694" />
+                  <stop offset="48%" stop-color="#9338EC" />
+                  <stop offset="100%" stop-color="#F088FF" />
+                </linearGradient>
+                <linearGradient id="shutter-b5-footer" x1="110" y1="184" x2="164" y2="128" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#7C3AED" />
+                  <stop offset="55%" stop-color="#4318A8" />
+                  <stop offset="100%" stop-color="#260B6E" />
+                </linearGradient>
+                <linearGradient id="shutter-b6-footer" x1="36" y1="142" x2="118" y2="174" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#4F67F5" />
+                  <stop offset="52%" stop-color="#4324C7" />
+                  <stop offset="100%" stop-color="#280D7A" />
+                </linearGradient>
+                <linearGradient id="shutter-b6-fold-footer" x1="38" y1="132" x2="102" y2="138" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#4A25B8" />
+                  <stop offset="100%" stop-color="#1B0854" />
+                </linearGradient>
+                <linearGradient id="ly-grad-footer" x1="560" y1="44" x2="612" y2="176" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#D946EF" />
+                  <stop offset="48%" stop-color="#8B35EA" />
+                  <stop offset="100%" stop-color="#461AA8" />
+                </linearGradient>
+              </defs>
+
+              <g transform="translate(8, 6)">
+                <path d="M36 55 C50 28, 76 12, 108 10 L84 68 C66 73, 52 70, 36 55 Z" fill="url(#shutter-b1-footer)" />
+                <path d="M114 10 C145 12, 171 29, 184 54 C156 50, 122 54, 91 71 L114 10 Z" fill="url(#shutter-b2-footer)" />
+                <path d="M122 57 C146 53, 166 53, 182 55 L161 73 C149 65, 136 60, 122 57 Z" fill="url(#shutter-b2-fold-footer)" />
+                <path d="M33 61 C54 88, 78 108, 108 117 C70 118, 41 108, 25 88 C24 78, 27 69, 33 61 Z" fill="url(#shutter-b3-footer)" />
+                <path d="M107 79 C148 82, 177 97, 186 121 C186 135, 181 148, 172 159 C161 132, 138 104, 107 79 Z" fill="url(#shutter-b4-footer)" />
+                <path d="M132 108 C149 125, 161 143, 168 163 C152 177, 129 185, 104 185 L132 108 Z" fill="url(#shutter-b5-footer)" />
+                <path d="M57 125 L73 135 C86 139, 102 136, 120 126 L98 184 C69 181, 45 165, 32 142 L57 125 Z" fill="url(#shutter-b6-footer)" />
+                <path d="M32 142 L57 125 C69 133, 88 136, 114 129 C84 143, 56 145, 32 142 Z" fill="url(#shutter-b6-fold-footer)" />
+              </g>
+
+              <g fill="#25232B">
+                <path d="M218 44 H240 V82 C246 73, 257 68, 270 68 C292 68, 305 82, 305 105 V146 H283 V109 C283 94, 275 87, 263 87 C250 87, 240 95, 240 110 V146 H218 V44 Z" />
+                <path d="M321 70 H343 V108 C343 122, 351 129, 363 129 C375 129, 383 122, 383 108 V70 H405 V110 C405 134, 388 148, 363 148 C338 148, 321 134, 321 110 V70 Z" />
+                <path d="M428 46 H450 V70 H468 V88 H450 V117 C450 125, 455 129, 464 129 H469 V146 H460 C439 146, 428 136, 428 117 V46 Z" />
+                <path d="M479 46 H501 V70 H519 V88 H501 V117 C501 125, 506 129, 515 129 H520 V146 H511 C490 146, 479 136, 479 117 V46 Z" />
+                <path d="M531 70 H552 V83 C557 73, 567 68, 579 68 V89 H574 C560 89, 553 96, 553 111 V146 H531 V70 Z" />
+              </g>
+
+              <g fill="url(#ly-grad-footer)">
+                <path d="M585 43 H607 V119 C607 126, 611 129, 618 129 H621 V146 H613 C594 146, 585 137, 585 119 V43 Z" />
+                <path d="M615 70 H639 L656 116 L673 70 H696 L656 165 C650 179, 640 185, 624 185 H617 V167 H622 C630 167, 635 164, 638 156 L643 144 L615 70 Z" />
+              </g>
+
+              <text
+                x="218"
+                y="177"
+                fill="#25232B"
+                font-family="Inter, system-ui, -apple-system, sans-serif"
+                font-size="15.5"
+                font-weight="600"
+                letter-spacing="0.34em"
+              >
+                DIGITAL MARKETING AGENCY
+              </text>
+            </svg>
+          </div>
+
+          <p class="text-sm text-[#777481] max-w-sm leading-relaxed pt-1">
+            Shuttrly is a digital marketing and creative growth agency helping ambitious businesses build their online presence, strengthen brand identity, and achieve measurable digital growth.
+          </p>
+          <div class="flex items-center gap-2 text-xs font-mono-tech text-[#25232B]">
+            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+            <span>ALL SYSTEMS OPERATIONAL // SHUTTRLY.COM</span>
+          </div>
+        </div>
+
+        <!-- Navigation Column (2 Cols) -->
+        <div class="md:col-span-2 space-y-2.5">
+          <div class="text-xs font-mono-tech uppercase tracking-wider text-[#25232B] font-semibold">
+            Navigation
+          </div>
+          <ul class="space-y-2 text-sm text-[#777481]">
+            <li><button type="button" onclick="scrollToSection('services')" class="hover:text-[#7138E8] transition-colors">Services</button></li>
+            <li><button type="button" onclick="scrollToSection('work')" class="hover:text-[#7138E8] transition-colors">Work</button></li>
+            <li><button type="button" onclick="scrollToSection('growth-lab')" class="hover:text-[#7138E8] transition-colors">Growth Lab</button></li>
+            <li><button type="button" onclick="scrollToSection('process')" class="hover:text-[#7138E8] transition-colors">Process</button></li>
+            <li><button type="button" onclick="scrollToSection('why-shuttrly')" class="hover:text-[#7138E8] transition-colors">Why Us</button></li>
+            <li><button type="button" onclick="scrollToSection('faq')" class="hover:text-[#7138E8] transition-colors">FAQ</button></li>
+          </ul>
+        </div>
+
+        <!-- Capabilities Column (3 Cols) -->
+        <div class="md:col-span-3 space-y-2.5">
+          <div class="text-xs font-mono-tech uppercase tracking-wider text-[#25232B] font-semibold">
+            Core Capabilities
+          </div>
+          <ul id="footer-capabilities-links" class="space-y-2 text-sm text-[#777481]">
+            <!-- Populated via JS -->
+          </ul>
+        </div>
+
+        <!-- Connect Column (2 Cols) -->
+        <div class="md:col-span-2 space-y-2.5">
+          <div class="text-xs font-mono-tech uppercase tracking-wider text-[#25232B] font-semibold">
+            Connect
+          </div>
+          <ul class="space-y-2 text-sm text-[#777481]">
+            <li>
+              <a href="mailto:hello@shuttrly.com" class="hover:text-[#7138E8]">hello@shuttrly.com</a>
+            </li>
+            <li>
+              <a href="#contact" onclick="event.preventDefault(); scrollToSection('contact');" class="hover:text-[#7138E8]">Book Discovery Call ↗</a>
+            </li>
+            <li>
+              <a href="#growth-lab" onclick="event.preventDefault(); scrollToSection('growth-lab');" class="hover:text-[#7138E8]">ROI Simulator</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#777481]">
+        <div>
+          © <span id="current-year"></span> Shuttrly Digital Marketing Agency (shuttrly.com). All rights reserved.
+        </div>
+        <div class="flex items-center gap-6">
+          <button
+            type="button"
+            onclick="scrollToSection('hero');"
+            class="font-semibold text-[#25232B] hover:text-[#7138E8] flex items-center gap-1"
+          >
+            <span>Back to Top ↑</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       13. INTERACTIVE CASE STUDY DEEP-DIVE MODAL
+       ========================================================================= -->
+  <div
+    id="case-study-modal-backdrop"
+    onclick="closeCaseStudyModal();"
+    class="hidden fixed inset-0 z-50 bg-[#25232B]/70 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto"
+  >
+    <div
+      onclick="event.stopPropagation();"
+      class="bg-white rounded-[32px] border border-[#E9E6EF] max-w-3xl w-full p-6 sm:p-10 shadow-2xl relative my-8"
+    >
+      <div class="flex items-start justify-between gap-4 pb-6 border-b border-[#E9E6EF]">
+        <div>
+          <span id="modal-client-industry" class="text-xs font-mono-tech uppercase tracking-wider text-[#7138E8] font-semibold"></span>
+          <h3 id="modal-title" class="font-display text-2xl sm:text-3xl font-extrabold text-[#25232B] mt-1"></h3>
+        </div>
+        <button
+          type="button"
+          onclick="closeCaseStudyModal();"
+          class="w-10 h-10 rounded-full bg-[#F7F6FA] hover:bg-[#E9E6EF] flex items-center justify-center text-[#25232B] shrink-0"
+        >
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Key Verified Outcomes -->
+      <div id="modal-metrics-grid" class="grid grid-cols-1 sm:grid-cols-3 gap-3 my-6"></div>
+
+      <!-- Narrative Sections -->
+      <div class="space-y-4 text-sm sm:text-base text-[#25232B]">
+        <div class="p-4 rounded-2xl bg-[#F7F6FA]/60 border border-[#E9E6EF]">
+          <div class="text-xs font-mono-tech uppercase text-[#777481] mb-1">01 // THE CHALLENGE</div>
+          <p id="modal-challenge" class="text-sm text-[#25232B] leading-relaxed"></p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-[#F7F6FA]/60 border border-[#E9E6EF]">
+          <div class="text-xs font-mono-tech uppercase text-[#7138E8] mb-1">02 // SHUTTRLY EXECUTION</div>
+          <p id="modal-solution" class="text-sm text-[#25232B] leading-relaxed"></p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-[#F7F6FA]/60 border border-[#E9E6EF]">
+          <div class="text-xs font-mono-tech uppercase text-emerald-700 mb-1">03 // COMMERCIAL OUTCOME</div>
+          <p id="modal-outcome" class="text-sm text-[#25232B] leading-relaxed"></p>
+        </div>
+
+        <blockquote class="p-5 rounded-2xl bg-[#25232B] text-white text-sm italic">
+          <span id="modal-quote"></span>
+          <footer id="modal-quote-author" class="not-italic text-xs text-white/70 mt-2 font-semibold"></footer>
+        </blockquote>
+      </div>
+
+      <div class="mt-6 pt-5 border-t border-[#E9E6EF] flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div id="modal-tags" class="flex flex-wrap gap-1.5"></div>
+        <button
+          type="button"
+          onclick="handleModalApplyToEnquiry();"
+          class="w-full sm:w-auto px-6 py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-[#7138E8] to-[#D946EF] flex items-center justify-center gap-2"
+        >
+          <span>Build Similar Results For My Brand ↗</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       COMPLETE APPLICATION DATA & INTERACTIVE LOGIC
+       ========================================================================= -->
+  <script>
+    /**
+     * =========================================================================
+     * 1. APPLICATION DATA (IDENTICAL TO REACT VERSION)
+     * =========================================================================
+     */
+    const NAV_ITEMS = [
+      { id: 'services', label: 'Services' },
+      { id: 'work', label: 'Work' },
+      { id: 'growth-lab', label: 'Growth Lab' },
+      { id: 'process', label: 'Process' },
+      { id: 'why-shuttrly', label: 'Why Us' },
+      { id: 'faq', label: 'FAQ' }
+    ];
+
+    const HERO_LENSES = [
+      {
+        id: 'brand',
+        code: 'LENS 01 // F1.4',
+        name: 'Brand Identity & Positioning',
+        headline: 'Category-Defining Visual Systems',
+        metricPrimary: '+240%',
+        metricPrimaryLabel: 'Brand Search Volume Lift',
+        metricSecondary: '99.2%',
+        metricSecondaryLabel: 'Design System Consistency',
+        speed: '1/2000s',
+        iso: 'ISO 100',
+        accent: '#7138E8',
+        description:
+          'We distill complex value propositions into unmistakable visual identities, verbal frameworks, and design systems that command premium market pricing.',
+        tags: ['Visual Identity', 'Brand Architecture', 'Design Systems', 'Art Direction']
+      },
+      {
+        id: 'web',
+        code: 'LENS 02 // F2.8',
+        name: 'Web Experience & Conversion',
+        headline: 'High-Velocity Flagship Websites',
+        metricPrimary: '3.9x',
+        metricPrimaryLabel: 'Visitor-to-Pipeline Conversion',
+        metricSecondary: '99/100',
+        metricSecondaryLabel: 'Core Web Vitals Performance',
+        speed: '1/4000s',
+        iso: 'ISO 64',
+        accent: '#D946EF',
+        description:
+          'Custom-engineered web experiences built with editorial typography, fluid micro-interactions, and conversion architecture that turns traffic into revenue.',
+        tags: ['Next-Gen Web Design', 'Full-Stack Dev', 'Interactive 3D/Motion', 'CRO Engineering']
+      },
+      {
+        id: 'growth',
+        code: 'LENS 03 // F5.6',
+        name: 'Performance & Paid Acquisition',
+        headline: 'Compound Revenue & ROAS Engine',
+        metricPrimary: '4.6x',
+        metricPrimaryLabel: 'Verified Blended Client ROAS',
+        metricSecondary: '-42%',
+        metricSecondaryLabel: 'Customer Acquisition Cost (CAC)',
+        speed: '1/8000s',
+        iso: 'ISO 200',
+        accent: '#5125B8',
+        description:
+          'Full-funnel paid media, high-converting creative production, and technical SEO calibrated daily against pipeline velocity and net contribution margin.',
+        tags: ['Paid Social & Search', 'Performance Creative', 'Technical SEO', 'Attribution']
+      }
+    ];
+
+    const SERVICES_DATA = [
+      {
+        id: 'brand-strategy',
+        number: '01',
+        title: 'Brand Strategy & Identity Systems',
+        shortDesc:
+          'Distinctive visual identities, positioning frameworks, and comprehensive brand guidelines engineered to make your business impossible to ignore.',
+        focalLength: '24mm f/1.4 Prime',
+        impactStat: '+185% Brand Recall & Pricing Power',
+        timeline: '4–6 Weeks',
+        investment: 'From $8,500',
+        deliverables: [
+          'Market & Competitive White-Space Audit',
+          'Brand Positioning, Messaging & Tone of Voice',
+          'Logo Suite, Motion Mark & Typography System',
+          'Comprehensive Figma Brand & UI Kit',
+          'Launch Art Direction & Social Identity Templates'
+        ]
+      },
+      {
+        id: 'web-development',
+        number: '02',
+        title: 'High-Conversion Web Design & Engineering',
+        shortDesc:
+          'Bespoke, lightning-fast websites and digital flagship experiences that fuse studio-grade aesthetics with relentless conversion psychology.',
+        focalLength: '35mm f/1.2 Master',
+        impactStat: '+210% Avg. Qualified Conversion Lift',
+        timeline: '6–10 Weeks',
+        investment: 'From $14,000',
+        deliverables: [
+          'UX Research, Wireframing & Conversion Architecture',
+          'Custom Editorial UI Design & Interactive Prototypes',
+          'Production React / Next.js / Headless CMS Engineering',
+          'Fluid Motion Design & Micro-Interactions',
+          'Technical SEO Foundation, Speed & Accessibility (WCAG AA)'
+        ]
+      },
+      {
+        id: 'performance-marketing',
+        number: '03',
+        title: 'Performance Marketing & Paid Acquisition',
+        shortDesc:
+          'Precision-targeted paid search, paid social, and programmatic campaigns backed by rapid creative testing and multi-touch revenue attribution.',
+        focalLength: '50mm f/1.8 Sharp',
+        impactStat: '4.2x Median Paid Media ROAS',
+        timeline: 'Ongoing Retainer',
+        investment: 'From $5,500/mo',
+        deliverables: [
+          'Full-Funnel Media Buying (Meta, Google, LinkedIn, TikTok)',
+          'Weekly Ad Creative Sprints & Hook Variation Testing',
+          'Custom Landing Page Funnels & Offer Positioning',
+          'Server-Side Tracking & CRM Pipeline Attribution',
+          'Live Executive Growth & ROAS Telemetry Dashboard'
+        ]
+      },
+      {
+        id: 'creative-production',
+        number: '04',
+        title: 'Creative Production & Social Storytelling',
+        shortDesc:
+          'Thumb-stopping campaign visuals, short-form video direction, 3D product motion, and authority-building social engines that captivate modern buyers.',
+        focalLength: '85mm f/1.4 Portrait',
+        impactStat: '3.4x Engagement & Ad Thumb-Stop Rate',
+        timeline: 'Monthly or Campaign',
+        investment: 'From $6,000/mo',
+        deliverables: [
+          'Campaign Concepting & Creative Direction',
+          'Motion Graphics, 3D Product Visuals & Video Editing',
+          'Paid Social Ad Creative Matrix (Static + Motion)',
+          'Executive LinkedIn & Organic Social Content Engine',
+          'Creator & UGC Scripting + Production Management'
+        ]
+      },
+      {
+        id: 'seo-authority',
+        number: '05',
+        title: 'Technical SEO & Organic Authority',
+        shortDesc:
+          'Compound non-paid acquisition through programmatic SEO, high-intent editorial architecture, digital PR, and AI-search (GEO) optimization.',
+        focalLength: '105mm f/2.8 Macro',
+        impactStat: '+312% YoY Organic Non-Branded Traffic',
+        timeline: '3–6 Month Compounding',
+        investment: 'From $4,800/mo',
+        deliverables: [
+          'Deep Technical Site Audit & Core Web Vitals Remediation',
+          'High-Intent Keyword & Topic Cluster Architecture',
+          'Programmatic Landing Pages & Editorial Content Production',
+          'Generative Engine Optimization (GEO / AI Search Visibility)',
+          'High-Authority Digital PR & Backlink Acquisition'
+        ]
+      },
+      {
+        id: 'cro-analytics',
+        number: '06',
+        title: 'Conversion Optimization (CRO) & Growth Analytics',
+        shortDesc:
+          'Turn more of your existing traffic into revenue through systematic A/B testing, heatmap diagnostics, checkout refinement, and funnel telemetry.',
+        focalLength: '70-200mm f/2.8 Zoom',
+        impactStat: '+48% Revenue Per Visitor (RPV)',
+        timeline: 'Continuous Sprints',
+        investment: 'From $4,500/mo',
+        deliverables: [
+          'Quantitative Funnel Drop-Off & Cohort Diagnostics',
+          'Heatmap, Session Recording & User Friction Audits',
+          'High-Velocity A/B & Multivariate Experimentation',
+          'Onboarding, Pricing Page & Checkout Flow Optimization',
+          'GA4, BigQuery & Executive Revenue Attribution Setup'
+        ]
+      }
+    ];
+
+    const CASE_STUDIES = [
+      {
+        id: 'veloce-ai',
+        client: 'Veloce Cloud AI',
+        industry: 'Enterprise B2B SaaS',
+        category: 'Web & Digital Products',
+        secondaryCategory: 'Branding & Identity',
+        title: 'Re-architecting an AI infrastructure pioneer for Series B velocity',
+        headlineMetric: '+318%',
+        headlineMetricLabel: 'Enterprise Demo Pipeline',
+        secondaryMetrics: [
+          { value: '4.1%', label: 'Visitor-to-Demo CVR (up from 1.1%)' },
+          { value: '$14.2M', label: 'Attributed Pipeline in 6 Months' },
+          { value: '0.5s', label: 'Global First Contentful Paint' }
+        ],
+        tags: ['Brand Repositioning', 'Interactive Web Flagship', 'CRO & Funnel Engineering'],
+        palette: ['#7138E8', '#D946EF', '#1E1B2E'],
+        challenge:
+          'Veloce Cloud had world-class inference technology but looked like an early-stage developer tool. Enterprise buyers were bouncing within 18 seconds, and paid acquisition CPL was climbing unsustainably.',
+        solution:
+          'Shuttrly overhauled their entire visual identity around precision telemetry, engineered a bespoke interactive web experience with live latency calculators, and rebuilt their enterprise demo booking flow.',
+        outcome:
+          'Within 90 days of launch, enterprise demo requests surged by 318%, average deal size grew by 64%, and Veloce closed their $38M Series B round ahead of schedule.',
+        quote:
+          '“Shuttrly gave us the visual gravitas of a $1B category leader while turning our website into our single highest-converting sales rep.”',
+        quoteAuthor: 'Elena Rostova, Chief Marketing Officer at Veloce Cloud'
+      },
+      {
+        id: 'lumina-botanicals',
+        client: 'Lumina Dermaceuticals',
+        industry: 'Luxury DTC Skincare',
+        category: 'Performance & Growth',
+        secondaryCategory: 'Social & Content',
+        title: 'Scaling clinical luxury skincare from $1.8M to $9.4M ARR at 4.6x ROAS',
+        headlineMetric: '4.6x',
+        headlineMetricLabel: 'Blended Paid Media ROAS',
+        secondaryMetrics: [
+          { value: '+422%', label: 'YoY Direct-to-Consumer Revenue' },
+          { value: '+68%', label: '90-Day Repeat Purchase Rate' },
+          { value: '-37%', label: 'Blended Customer Acquisition Cost' }
+        ],
+        tags: ['Paid Social & Search', 'Creative Production', 'Shopify Plus CRO'],
+        palette: ['#D946EF', '#7138E8', '#25232B'],
+        challenge:
+          'Rising Meta CPMs and generic studio ads had stalled Lumina’s growth. Their storefront lacked educational authority and failed to convert cold top-of-funnel traffic.',
+        solution:
+          'We produced a modular library of 60+ clinical-editorial video and static assets, deployed custom quiz-to-regimen landing pages, and restructured their Meta, TikTok, and Google Shopping architecture.',
+        outcome:
+          'Lumina scaled monthly revenue by over 4x while maintaining a verified 4.6x blended ROAS and lifting average order value (AOV) from $78 to $124.',
+        quote:
+          '“Most agencies either understand luxury aesthetics or performance math. Shuttrly mastered both in our very first month.”',
+        quoteAuthor: 'Marcus Vance, Founder & CEO at Lumina Dermaceuticals'
+      },
+      {
+        id: 'kinetix-fintech',
+        client: 'Kinetix Treasury',
+        industry: 'B2B FinTech & Payments',
+        category: 'Branding & Identity',
+        secondaryCategory: 'Web & Digital Products',
+        title: 'Crafting a high-trust identity & organic authority engine for global CFOs',
+        headlineMetric: '+275%',
+        headlineMetricLabel: 'Organic Non-Branded Signups',
+        secondaryMetrics: [
+          { value: '#1–3', label: 'Rankings for 85+ Commercial FinTech Terms' },
+          { value: '2.8x', label: 'Outbound Sales Reply Rate Lift' },
+          { value: '94%', label: 'Brand Trust Score in Buyer Surveys' }
+        ],
+        tags: ['Identity System', 'Design System', 'Programmatic SEO'],
+        palette: ['#5125B8', '#7138E8', '#0F172A'],
+        challenge:
+          'Competing in a crowded corporate treasury market, Kinetix blended into a sea of generic blue fintech templates and relied almost entirely on expensive outbound SDR teams.',
+        solution:
+          'Shuttrly created an unmistakable editorial brand identity, launched a 140-page programmatic treasury comparison hub, and unified product and marketing UI under one design system.',
+        outcome:
+          'Organic inbound pipeline eclipsed outbound within 5 months, cutting payback periods from 14 months to 5.5 months.',
+        quote:
+          '“Our prospects literally bring up our website and brand experience on discovery calls. Shuttrly transformed how the market perceives us.”',
+        quoteAuthor: 'David Chen, VP of Growth at Kinetix Treasury'
+      },
+      {
+        id: 'aether-mobility',
+        client: 'Aether Electric Mobility',
+        industry: 'Next-Gen Consumer Hardware',
+        category: 'Social & Content',
+        secondaryCategory: 'Performance & Growth',
+        title: 'Generating $6.8M in flagship launch reservations in 21 days',
+        headlineMetric: '$6.8M',
+        headlineMetricLabel: 'Launch Window Reservations',
+        secondaryMetrics: [
+          { value: '18.4M', label: 'Organic + Paid Launch Video Views' },
+          { value: '$19', label: 'Cost Per $250 Paid Reservation' },
+          { value: '6.2%', label: 'Landing Page Reservation CVR' }
+        ],
+        tags: ['3D Motion & Launch Film', 'Full-Funnel Paid Acquisition', 'Interactive Configurator'],
+        palette: ['#7138E8', '#9333EA', '#18181B'],
+        challenge:
+          'Aether needed to launch their flagship commuter e-bike in 4 major metropolitan markets with zero prior brand awareness and an ambitious reservation target.',
+        solution:
+          'We directed the launch campaign visuals, built an interactive 360-degree web configurator, and orchestrated a synchronized multi-channel demand blitz across Meta, YouTube, and high-intent search.',
+        outcome:
+          'Sold out the entire Q1 and Q2 production allocation in 21 days, generating $6.8M in reservation value at a fraction of projected ad spend.',
+        quote:
+          '“The launch felt like an Apple keynote meets a surgical growth machine. Shuttrly delivered beyond every projection.”',
+        quoteAuthor: 'Sora Takahashi, Co-Founder at Aether Mobility'
+      }
+    ];
+
+    const PROCESS_STEPS = [
+      {
+        step: '01',
+        lensSpec: 'F/1.4 // CALIBRATE',
+        title: 'Diagnostic Audit & Strategic Calibration',
+        duration: 'Weeks 1–2',
+        summary:
+          'Before designing a pixel or spending a dollar on media, we dissect your unit economics, competitive landscape, buyer psychology, and technical funnel leakage.',
+        deliverables: [
+          'Full-Funnel Analytics, Attribution & Conversion Audit',
+          'Competitor Positioning & Creative White-Space Matrix',
+          'Ideal Customer Profile (ICP) & Jobs-To-Be-Done Research',
+          '90-Day Prioritized Growth & Revenue Roadmap'
+        ],
+        kpiFocus: 'Baseline CAC, LTV, Funnel Drop-Off & Opportunity Sizing'
+      },
+      {
+        step: '02',
+        lensSpec: 'F/2.8 // ARCHITECT',
+        title: 'Brand Framing & Experience Architecture',
+        duration: 'Weeks 3–5',
+        summary:
+          'We translate strategy into an unmistakable visual language, high-converting information architecture, persuasive copywriting, and campaign creative concepts.',
+        deliverables: [
+          'Brand Identity System & Editorial Design Language',
+          'Conversion-First Wireframes & Interactive Figma Prototypes',
+          'Direct-Response & Brand Narrative Copywriting',
+          'Multi-Channel Ad Creative & Content Blueprints'
+        ],
+        kpiFocus: 'Message Clarity Score, Prototype Usability & Hook Velocity'
+      },
+      {
+        step: '03',
+        lensSpec: 'F/4.0 // CAPTURE',
+        title: 'Precision Engineering & Campaign Launch',
+        duration: 'Weeks 6–8',
+        summary:
+          'Our senior engineers, motion designers, and media buyers build and deploy your flagship digital assets with sub-second performance and bulletproof tracking.',
+        deliverables: [
+          'Production Web Engineering (React / Next.js / Headless)',
+          'Server-Side Tracking, GA4 & CRM Attribution Integration',
+          'Paid Search, Paid Social & SEO Campaign Deployment',
+          'Zero-Downtime Launch QA & Speed Optimization'
+        ],
+        kpiFocus: 'Core Web Vitals (98+), Tracking Accuracy & Initial ROAS'
+      },
+      {
+        step: '04',
+        lensSpec: 'F/8.0 // COMPOUND',
+        title: 'Continuous CRO, Creative Sprints & Scale',
+        duration: 'Ongoing Growth',
+        summary:
+          'Launch is just day one. We run weekly creative testing sprints, A/B conversion experiments, and budget reallocations to compound your market share month over month.',
+        deliverables: [
+          'Bi-Weekly A/B Conversion Rate Optimization Sprints',
+          'Continuous Ad Creative Refresh & Winner Scaling',
+          'Programmatic & Editorial SEO Authority Expansion',
+          'Live Executive Telemetry & Bi-Weekly Strategy Reviews'
+        ],
+        kpiFocus: 'Net Pipeline Velocity, Blended MER / ROAS & LTV:CAC Ratio'
+      }
+    ];
+
+    const FAQ_ITEMS = [
+      {
+        q: 'How is Shuttrly different from a traditional digital marketing agency or design studio?',
+        a: 'Traditional creative studios build beautiful websites that don’t convert, while traditional performance agencies run generic templates that erode brand equity. Shuttrly unifies senior brand/web craft with quantitative conversion engineering and paid/organic acquisition under one roof—so your brand looks world-class and compounds measurable revenue.'
+      },
+      {
+        q: 'What does a typical engagement timeline and onboarding look like?',
+        a: 'We kick off within 5 business days of agreement. Brand and flagship web transformations typically take 6 to 10 weeks from diagnostic audit to live launch. Performance marketing, SEO, and CRO growth partnerships launch initial campaigns within 14 days and compound through structured weekly sprints.'
+      },
+      {
+        q: 'Do we work directly with senior strategists, designers, and engineers?',
+        a: 'Yes—100%. At Shuttrly, we do not bait-and-switch you with senior pitch teams only to hand your account to junior generalists. You collaborate directly in a dedicated Slack channel and bi-weekly strategy reviews with the senior principals building your brand, code, and campaigns.'
+      },
+      {
+        q: 'How do you measure and report on ROI and marketing attribution?',
+        a: 'Every client receives a custom, real-time Shuttrly Executive Telemetry Dashboard connecting GA4, ad platforms, server-side conversion APIs, and your CRM (HubSpot, Salesforce, or Shopify). We report on metrics that actually matter to your P&L: qualified pipeline, net contribution margin, blended MER/ROAS, and payback period.'
+      },
+      {
+        q: 'Can we start with a standalone project (like a website or rebrand) before moving to a growth retainer?',
+        a: 'Absolutely. Roughly 65% of our long-term growth partners begin with a focused Brand Identity & Flagship Website engagement or a 30-Day Diagnostic & Conversion Sprint, then transition seamlessly into an ongoing acquisition and CRO partnership.'
+      }
+    ];
+
+    /**
+     * =========================================================================
+     * 2. APPLICATION STATE
+     * =========================================================================
+     */
+    let isInitialPeriod = true;
+    let isHoveredOrFocused = false;
+    let isPinnedExpanded = false;
+    let isMobileMenuOpen = false;
+    let activeSection = 'hero';
+    let initialTimerId = null;
+    let hoverLeaveTimeoutId = null;
+
+    // Hero Lens & Aperture State
+    let activeLensIndex = 0;
+    let apertureStop = 2.8;
+
+    // Services Inspector State
+    let selectedService = SERVICES_DATA[0];
+
+    // Portfolio Filter & Modal State
+    let activeWorkFilter = 'All Work';
+    let activeCaseStudyModal = null;
+
+    // Growth Lab ROI Simulator State
+    let monthlyBudget = 15000;
+    let monthlyVisitors = 35000;
+    let currentCvr = 1.4;
+    let growthFocus = 'complete';
+
+    // Process & FAQ State
+    let activeProcessIndex = 0;
+    let openFaqIndex = 0;
+
+    // Enquiry Form State
+    let enquiryForm = {
+      services: ['High-Conversion Web Design & Engineering', 'Brand Strategy & Identity Systems'],
+      budget: '$15k – $30k',
+      timeline: 'Within 30 Days'
+    };
+
+    /**
+     * =========================================================================
+     * 3. DYNAMIC ISLAND NAVIGATION LOGIC & EXACT 2.0-SECOND INITIAL TIMER
+     * =========================================================================
+     */
+    function isIslandCurrentlyExpanded() {
+      return isInitialPeriod || isHoveredOrFocused || isPinnedExpanded || isMobileMenuOpen;
+    }
+
+    function updateDynamicIslandDOM() {
+      const navEl = document.getElementById('dynamic-island-nav');
+      const wingEl = document.getElementById('dynamic-island-wing');
+      const progressContainer = document.getElementById('island-2s-progress-container');
+      const statusLabel = document.getElementById('nav-status-label');
+      const pinBtn = document.getElementById('pin-island-btn');
+      const mobileSheet = document.getElementById('mobile-menu-sheet');
+      const mobileChevron = document.getElementById('mobile-menu-chevron');
+
+      const expanded = isIslandCurrentlyExpanded();
+
+      // Update Pill Container
+      navEl.style.maxWidth = expanded ? '1060px' : '236px';
+      if (expanded) {
+        navEl.className =
+          'dynamic-island-pill relative flex items-center justify-center rounded-full bg-[#FFFFFF]/95 backdrop-blur-md border px-4 sm:px-6 py-2.5 border-[#E9E6EF] shadow-[0_18px_45px_-12px_rgba(37,35,43,0.13),0_4px_16px_-2px_rgba(113,56,232,0.08)]';
+      } else {
+        navEl.className =
+          'dynamic-island-pill relative flex items-center justify-center rounded-full bg-[#FFFFFF]/95 backdrop-blur-md border px-6 py-2.5 border-[#E9E6EF] hover:border-[#7138E8]/40 shadow-[0_12px_32px_-8px_rgba(37,35,43,0.12),0_2px_10px_0_rgba(113,56,232,0.07)] cursor-pointer';
+      }
+
+      // Update Wing (Links + Right CTA)
+      wingEl.style.maxWidth = expanded ? '780px' : '0px';
+      wingEl.style.opacity = expanded ? '1' : '0';
+      wingEl.style.transform = expanded ? 'scale(1)' : 'scale(0.92)';
+      wingEl.setAttribute('aria-hidden', String(!expanded));
+      if (expanded) {
+        wingEl.className = 'dynamic-island-wing overflow-hidden flex items-center ml-3 lg:ml-6 pointer-events-auto';
+      } else {
+        wingEl.className = 'dynamic-island-wing overflow-hidden flex items-center ml-0 pointer-events-none';
+      }
+
+      // Update 2s Progress Line
+      if (isInitialPeriod) {
+        progressContainer.classList.remove('hidden');
+      } else {
+        progressContainer.classList.add('hidden');
+      }
+
+      // Update Status Label in Hero Strip
+      if (statusLabel) {
+        statusLabel.textContent = expanded ? 'Expanded' : 'Compact Logo Capsule (Hover Top Pill)';
+      }
+
+      // Update Pin Button State
+      if (pinBtn) {
+        pinBtn.title = isPinnedExpanded
+          ? 'Unpin navigation (auto-collapse to logo capsule)'
+          : 'Pin navigation open';
+        pinBtn.className = isPinnedExpanded
+          ? 'hidden lg:inline-flex items-center justify-center w-8 h-8 rounded-full border border-[#7138E8]/40 bg-[#7138E8]/10 text-[#7138E8] text-xs transition-colors'
+          : 'hidden lg:inline-flex items-center justify-center w-8 h-8 rounded-full border border-transparent text-[#777481] hover:text-[#25232B] hover:bg-[#F7F6FA] text-xs transition-colors';
+        pinBtn.innerHTML = `<i data-lucide="${isPinnedExpanded ? 'lock' : 'unlock'}" class="w-3.5 h-3.5"></i>`;
+      }
+
+      // Mobile Sheet & Chevron
+      if (isMobileMenuOpen) {
+        mobileSheet.classList.remove('hidden');
+        if (mobileChevron) mobileChevron.classList.add('rotate-180');
+      } else {
+        mobileSheet.classList.add('hidden');
+        if (mobileChevron) mobileChevron.classList.remove('rotate-180');
+      }
+
+      lucide.createIcons();
+    }
+
+    function renderNavigationLinks() {
+      const desktopList = document.getElementById('desktop-nav-links');
+      const mobileList = document.getElementById('mobile-nav-links');
+
+      desktopList.innerHTML = NAV_ITEMS.map((item) => {
+        const isActive = activeSection === item.id;
+        return `
+          <li>
+            <button
+              type="button"
+              onclick="event.stopPropagation(); scrollToSection('${item.id}');"
+              class="px-3.5 py-2 rounded-full text-[13.5px] font-medium transition-all duration-200 ${
+                isActive
+                  ? 'bg-[#F7F6FA] text-[#7138E8] font-semibold'
+                  : 'text-[#25232B] hover:text-[#7138E8] hover:bg-[#F7F6FA]/70'
+              }"
+            >
+              ${item.label}
+            </button>
+          </li>
+        `;
+      }).join('');
+
+      mobileList.innerHTML = NAV_ITEMS.map((item) => `
+        <button
+          type="button"
+          onclick="scrollToSection('${item.id}');"
+          class="flex items-center justify-between px-3.5 py-2.5 rounded-2xl text-left text-sm font-medium text-[#25232B] hover:bg-[#F7F6FA] hover:text-[#7138E8] border border-[#E9E6EF]/60"
+        >
+          <span>${item.label}</span>
+          <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-[#777481]"></i>
+        </button>
+      `).join('');
+
+      lucide.createIcons();
+    }
+
+    function replayDynamicIslandIntro() {
+      isPinnedExpanded = false;
+      isHoveredOrFocused = false;
+      isInitialPeriod = true;
+
+      // Restart CSS animation on progress bar cleanly
+      const bar = document.getElementById('island-2s-progress-bar');
+      if (bar) {
+        bar.classList.remove('animate-2s-bar');
+        void bar.offsetWidth;
+        bar.classList.add('animate-2s-bar');
+      }
+
+      updateDynamicIslandDOM();
+
+      if (initialTimerId) clearTimeout(initialTimerId);
+      initialTimerId = setTimeout(() => {
+        isInitialPeriod = false;
+        updateDynamicIslandDOM();
+      }, 2000);
+    }
+
+    function togglePinIsland() {
+      isPinnedExpanded = !isPinnedExpanded;
+      updateDynamicIslandDOM();
+    }
+
+    function toggleMobileMenu() {
+      isMobileMenuOpen = !isMobileMenuOpen;
+      updateDynamicIslandDOM();
+    }
+
+    function scrollToSection(sectionId) {
+      const el = document.getElementById(sectionId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      isMobileMenuOpen = false;
+      isHoveredOrFocused = false;
+      updateDynamicIslandDOM();
+    }
+
+    /**
+     * =========================================================================
+     * 4. HERO CAMERA-SHUTTER VISUALIZER LOGIC
+     * =========================================================================
+     */
+    function renderHeroVisualizer() {
+      const activeLens = HERO_LENSES[activeLensIndex];
+
+      // Switcher buttons
+      const switcherContainer = document.getElementById('lens-switcher-buttons');
+      switcherContainer.innerHTML = HERO_LENSES.map((lens, idx) => {
+        const isSelected = idx === activeLensIndex;
+        const label = idx === 0 ? '01 Brand' : idx === 1 ? '02 Web UX' : '03 Growth';
+        return `
+          <button
+            type="button"
+            onclick="selectHeroLens(${idx});"
+            class="py-2 px-2.5 rounded-xl text-xs font-semibold transition-all ${
+              isSelected
+                ? 'bg-white text-[#7138E8] shadow-sm border border-[#E9E6EF]'
+                : 'text-[#777481] hover:text-[#25232B]'
+            }"
+          >
+            ${label}
+          </button>
+        `;
+      }).join('');
+
+      // Telemetry text
+      document.getElementById('lens-code-display').textContent = activeLens.code;
+      document.getElementById('lens-speed-display').textContent = activeLens.speed;
+      document.getElementById('lens-aperture-badge').textContent = `f/${apertureStop.toFixed(1)}`;
+      document.getElementById('aperture-slider-value').textContent = `f/${apertureStop.toFixed(1)}`;
+
+      // Shutter SVG rotation & inner circle aperture radius
+      const shutterSvg = document.getElementById('hero-shutter-svg');
+      const innerCircle = document.getElementById('hero-shutter-inner-circle');
+      const centerLabel = document.getElementById('hero-shutter-center-label');
+
+      const rotationDeg = activeLensIndex * 45 + apertureStop * 8;
+      shutterSvg.style.transform = `rotate(${rotationDeg}deg)`;
+      innerCircle.setAttribute('r', String(Math.max(18, 46 - apertureStop * 3)));
+      centerLabel.textContent = activeLensIndex === 0 ? 'BRAND' : activeLensIndex === 1 ? 'WEB' : 'ROAS';
+
+      // Active Lens Description & Metrics
+      document.getElementById('lens-name-display').textContent = activeLens.name;
+      document.getElementById('lens-headline-display').textContent = activeLens.headline;
+      document.getElementById('lens-desc-display').textContent = activeLens.description;
+      document.getElementById('lens-metric1-val').textContent = activeLens.metricPrimary;
+      document.getElementById('lens-metric1-label').textContent = activeLens.metricPrimaryLabel;
+      document.getElementById('lens-metric2-val').textContent = activeLens.metricSecondary;
+      document.getElementById('lens-metric2-label').textContent = activeLens.metricSecondaryLabel;
+
+      // Tags
+      const tagsContainer = document.getElementById('lens-tags-container');
+      tagsContainer.innerHTML = activeLens.tags
+        .map(
+          (tag) => `
+          <span class="px-2.5 py-1 rounded-full text-[11px] font-medium bg-white border border-[#E9E6EF] text-[#25232B]">
+            ${tag}
+          </span>
+        `
+        )
+        .join('');
+    }
+
+    function selectHeroLens(idx) {
+      activeLensIndex = idx;
+      renderHeroVisualizer();
+    }
+
+    /**
+     * =========================================================================
+     * 5. SERVICES BENTO GRID & DELIVERABLE INSPECTOR LOGIC
+     * =========================================================================
+     */
+    function renderServicesSection() {
+      const gridEl = document.getElementById('services-cards-grid');
+      gridEl.innerHTML = SERVICES_DATA.map((service) => {
+        const isSelected = selectedService.id === service.id;
+        return `
+          <div
+            onclick="selectServiceById('${service.id}');"
+            role="button"
+            tabindex="0"
+            onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectServiceById('${service.id}');}"
+            class="group text-left p-6 rounded-3xl border transition-all duration-300 cursor-pointer flex flex-col justify-between ${
+              isSelected
+                ? 'bg-[#25232B] text-white border-[#25232B] shadow-[0_20px_50px_-12px_rgba(37,35,43,0.28)] -translate-y-0.5'
+                : 'bg-[#F7F6FA]/70 hover:bg-white text-[#25232B] border-[#E9E6EF] hover:border-[#7138E8]/50 hover:shadow-lg'
+            }"
+          >
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-5">
+                <span class="font-mono-tech text-xs font-bold px-2.5 py-1 rounded-full ${
+                  isSelected
+                    ? 'bg-[#7138E8] text-white'
+                    : 'bg-white text-[#7138E8] border border-[#E9E6EF]'
+                }">
+                  ${service.number}
+                </span>
+                <span class="font-mono-tech text-[11px] ${
+                  isSelected ? 'text-white/70' : 'text-[#777481]'
+                }">
+                  ${service.focalLength}
+                </span>
+              </div>
+
+              <h3 class="font-display text-xl font-bold mb-2.5 leading-snug">
+                ${service.title}
+              </h3>
+
+              <p class="text-sm leading-relaxed mb-5 ${
+                isSelected ? 'text-white/80' : 'text-[#777481]'
+              }">
+                ${service.shortDesc}
+              </p>
+            </div>
+
+            <div class="pt-4 border-t flex items-center justify-between text-xs font-semibold ${
+              isSelected
+                ? 'border-white/15 text-[#D946EF]'
+                : 'border-[#E9E6EF] text-[#7138E8]'
+            }">
+              <span>${service.impactStat}</span>
+              <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      // Update Sticky Inspector
+      document.getElementById('inspector-number').textContent = `ACTIVE SPECIFICATION // ${selectedService.number}`;
+      document.getElementById('inspector-title').textContent = selectedService.title;
+      document.getElementById('inspector-timeline').textContent = selectedService.timeline;
+      document.getElementById('inspector-impact').textContent = selectedService.impactStat;
+      document.getElementById('inspector-cta-text').textContent = `Scope “${selectedService.title}” With Us`;
+
+      const delivList = document.getElementById('inspector-deliverables');
+      delivList.innerHTML = selectedService.deliverables
+        .map(
+          (item) => `
+          <li class="flex items-start gap-3 p-3 rounded-2xl bg-white border border-[#E9E6EF]/80 text-sm text-[#25232B]">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-[#7138E8] shrink-0 mt-0.5"></i>
+            <span>${item}</span>
+          </li>
+        `
+        )
+        .join('');
+
+      lucide.createIcons();
+    }
+
+    function selectServiceById(serviceId) {
+      const found = SERVICES_DATA.find((s) => s.id === serviceId);
+      if (found) {
+        selectedService = found;
+        renderServicesSection();
+      }
+    }
+
+    function handleScopeActiveService() {
+      const title = selectedService.title;
+      if (!enquiryForm.services.includes(title)) {
+        enquiryForm.services = [title, ...enquiryForm.services];
+      }
+      renderEnquiryFormConfig();
+      scrollToSection('contact');
+    }
+
+    /**
+     * =========================================================================
+     * 6. SELECTED WORK / CASE STUDIES & MODAL LOGIC
+     * =========================================================================
+     */
+    const WORK_FILTERS = [
+      'All Work',
+      'Branding & Identity',
+      'Web & Digital Products',
+      'Performance & Growth',
+      'Social & Content'
+    ];
+
+    function renderCaseStudiesSection() {
+      const tabsContainer = document.getElementById('work-filter-tabs');
+      tabsContainer.innerHTML = WORK_FILTERS.map((tab) => {
+        const active = activeWorkFilter === tab;
+        return `
+          <button
+            type="button"
+            onclick="setWorkFilter('${tab}');"
+            class="px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all ${
+              active
+                ? 'bg-[#25232B] text-white shadow-sm'
+                : 'bg-white text-[#777481] hover:text-[#25232B] border border-[#E9E6EF]'
+            }"
+          >
+            ${tab}
+          </button>
+        `;
+      }).join('');
+
+      const filtered =
+        activeWorkFilter === 'All Work'
+          ? CASE_STUDIES
+          : CASE_STUDIES.filter(
+              (s) => s.category === activeWorkFilter || s.secondaryCategory === activeWorkFilter
+            );
+
+      const gridContainer = document.getElementById('case-studies-grid');
+      gridContainer.innerHTML = filtered
+        .map(
+          (study, index) => `
+          <article
+            onclick="openCaseStudyModal('${study.id}');"
+            class="group bg-white rounded-[32px] border border-[#E9E6EF] hover:border-[#7138E8]/50 overflow-hidden shadow-sm hover:shadow-[0_24px_60px_-15px_rgba(37,35,43,0.12)] transition-all duration-300 cursor-pointer flex flex-col justify-between"
+          >
+            <div class="relative h-64 sm:h-72 w-full overflow-hidden bg-[#25232B] p-6 sm:p-8 flex flex-col justify-between">
+              <div
+                class="absolute inset-0 opacity-90 transition-transform duration-700 group-hover:scale-105"
+                style="background: radial-gradient(circle at 80% 20%, ${study.palette[1]} 0%, ${study.palette[0]} 42%, ${study.palette[2]} 100%);"
+              ></div>
+
+              <!-- Subtle Shutter Blade Overlay -->
+              <svg
+                viewBox="0 0 200 200"
+                fill="none"
+                class="pointer-events-none select-none transition-transform duration-700 absolute -right-12 -bottom-12 w-72 h-72 group-hover:rotate-45"
+                style="opacity: 0.16;"
+              >
+                <circle cx="100" cy="100" r="92" stroke="#7138E8" stroke-width="1.5" stroke-dasharray="4 6" />
+                <circle cx="100" cy="100" r="68" stroke="#5125B8" stroke-width="1.2" />
+                <path d="M100 8 L138 68 L62 68 Z" stroke="#7138E8" stroke-width="1.5" />
+                <path d="M180 54 L138 120 L100 54 Z" stroke="#D946EF" stroke-width="1.5" />
+                <path d="M180 146 L100 146 L138 80 Z" stroke="#7138E8" stroke-width="1.5" />
+                <path d="M100 192 L62 132 L138 132 Z" stroke="#5125B8" stroke-width="1.5" />
+                <path d="M20 146 L62 80 L100 146 Z" stroke="#D946EF" stroke-width="1.5" />
+                <path d="M20 54 L100 54 L62 120 Z" stroke="#7138E8" stroke-width="1.5" />
+              </svg>
+
+              <div class="relative z-10 flex items-center justify-between gap-2">
+                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-white/15 backdrop-blur-md text-white border border-white/20">
+                  ${study.client} — ${study.industry}
+                </span>
+                <span class="w-9 h-9 rounded-full bg-white text-[#25232B] flex items-center justify-center group-hover:bg-[#7138E8] group-hover:text-white transition-colors">
+                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </span>
+              </div>
+
+              <div class="relative z-10 flex items-end justify-between gap-4">
+                <div>
+                  <div class="font-mono-tech text-[11px] uppercase tracking-wider text-white/75">
+                    VERIFIED IMPACT
+                  </div>
+                  <div class="font-display text-4xl sm:text-5xl font-extrabold text-white tracking-tight">
+                    ${study.headlineMetric}
+                  </div>
+                  <div class="text-xs sm:text-sm text-white/90 font-medium">
+                    ${study.headlineMetricLabel}
+                  </div>
+                </div>
+
+                <div class="hidden sm:flex flex-col items-end text-right">
+                  <span class="font-mono-tech text-[11px] text-white/70">
+                    CASE FILE // 0${index + 1}
+                  </span>
+                  <span class="mt-1 inline-flex items-center gap-1 text-xs font-semibold text-white underline underline-offset-4">
+                    Inspect Case Study
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex flex-wrap gap-1.5 mb-3">
+                  ${study.tags
+                    .map(
+                      (tag) => `
+                    <span class="text-[11px] font-medium px-2.5 py-0.5 rounded-full bg-[#F7F6FA] text-[#777481] border border-[#E9E6EF]">
+                      ${tag}
+                    </span>
+                  `
+                    )
+                    .join('')}
+                </div>
+
+                <h3 class="font-display text-xl sm:text-2xl font-bold text-[#25232B] group-hover:text-[#7138E8] transition-colors leading-snug mb-3">
+                  ${study.title}
+                </h3>
+
+                <p class="text-sm text-[#777481] leading-relaxed line-clamp-2 mb-6">
+                  ${study.solution}
+                </p>
+              </div>
+
+              <div class="grid grid-cols-3 gap-2 pt-4 border-t border-[#E9E6EF]">
+                ${study.secondaryMetrics
+                  .map(
+                    (m) => `
+                  <div>
+                    <div class="font-display text-base sm:text-lg font-extrabold text-[#25232B]">
+                      ${m.value}
+                    </div>
+                    <div class="text-[11px] text-[#777481] leading-tight mt-0.5">
+                      ${m.label}
+                    </div>
+                  </div>
+                `
+                  )
+                  .join('')}
+              </div>
+            </div>
+          </article>
+        `
+        )
+        .join('');
+
+      lucide.createIcons();
+    }
+
+    function setWorkFilter(tab) {
+      activeWorkFilter = tab;
+      renderCaseStudiesSection();
+    }
+
+    function openCaseStudyModal(studyId) {
+      const found = CASE_STUDIES.find((s) => s.id === studyId);
+      if (!found) return;
+      activeCaseStudyModal = found;
+
+      document.getElementById('modal-client-industry').textContent = `${found.client} // ${found.industry}`;
+      document.getElementById('modal-title').textContent = found.title;
+      document.getElementById('modal-challenge').textContent = found.challenge;
+      document.getElementById('modal-solution').textContent = found.solution;
+      document.getElementById('modal-outcome').textContent = found.outcome;
+      document.getElementById('modal-quote').textContent = found.quote;
+      document.getElementById('modal-quote-author').textContent = `— ${found.quoteAuthor}`;
+
+      document.getElementById('modal-metrics-grid').innerHTML = found.secondaryMetrics
+        .map(
+          (m) => `
+          <div class="p-4 rounded-2xl bg-[#F7F6FA] border border-[#E9E6EF]">
+            <div class="font-display text-2xl font-extrabold text-[#7138E8]">${m.value}</div>
+            <div class="text-xs text-[#777481] mt-0.5">${m.label}</div>
+          </div>
+        `
+        )
+        .join('');
+
+      document.getElementById('modal-tags').innerHTML = found.tags
+        .map(
+          (t) => `
+          <span class="px-2.5 py-1 rounded-full text-xs bg-[#F7F6FA] border border-[#E9E6EF] text-[#777481]">
+            ${t}
+          </span>
+        `
+        )
+        .join('');
+
+      document.getElementById('case-study-modal-backdrop').classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function closeCaseStudyModal() {
+      activeCaseStudyModal = null;
+      document.getElementById('case-study-modal-backdrop').classList.add('hidden');
+    }
+
+    function handleModalApplyToEnquiry() {
+      if (activeCaseStudyModal) {
+        const clientName = activeCaseStudyModal.client;
+        document.getElementById('input-goals').value = `Interested in achieving results similar to the ${clientName} case study.`;
+      }
+      closeCaseStudyModal();
+      scrollToSection('contact');
+    }
+
+    /**
+     * =========================================================================
+     * 7. GROWTH LAB ROI SIMULATOR LOGIC
+     * =========================================================================
+     */
+    const GROWTH_MODES = [
+      { id: 'brand-web', title: 'Brand + Web Overhaul', sub: 'Identity & CRO Flagship' },
+      { id: 'performance', title: 'Paid + CRO Engine', sub: 'Full-Funnel Acquisition' },
+      { id: 'complete', title: 'Complete Growth Partner', sub: 'Brand + Web + Paid + SEO' }
+    ];
+
+    function calculateRoiProjections() {
+      const focusMultipliers = {
+        'brand-web': { trafficMult: 1.45, cvrMult: 1.95, tier: 'Brand + Flagship Web Sprint' },
+        performance: { trafficMult: 2.25, cvrMult: 1.55, tier: 'Full-Funnel Paid & CRO Retainer' },
+        complete: { trafficMult: 2.65, cvrMult: 2.15, tier: 'Complete Shuttrly Growth Partnership' }
+      }[growthFocus];
+
+      const currentMonthlyLeads = Math.round(monthlyVisitors * (currentCvr / 100));
+      const projectedVisitors = Math.round(monthlyVisitors * focusMultipliers.trafficMult);
+      const projectedCvr = +(currentCvr * focusMultipliers.cvrMult).toFixed(2);
+      const projectedMonthlyLeads = Math.round(projectedVisitors * (projectedCvr / 100));
+      const netNewMonthlyLeads = Math.max(12, projectedMonthlyLeads - currentMonthlyLeads);
+      const estimatedSixMonthPipeline = Math.round(
+        netNewMonthlyLeads * 6 * (monthlyBudget * 0.14 + 420)
+      );
+      const rawRoas = +(estimatedSixMonthPipeline / (monthlyBudget * 6)).toFixed(1);
+      const projectedRoas = Math.min(8.4, Math.max(2.9, rawRoas));
+
+      return {
+        currentMonthlyLeads,
+        projectedVisitors,
+        projectedCvr,
+        projectedMonthlyLeads,
+        netNewMonthlyLeads,
+        estimatedSixMonthPipeline,
+        projectedRoas,
+        recommendedTier: focusMultipliers.tier
+      };
+    }
+
+    function renderGrowthLab() {
+      const modeBtns = document.getElementById('growth-mode-buttons');
+      modeBtns.innerHTML = GROWTH_MODES.map((mode) => {
+        const active = growthFocus === mode.id;
+        return `
+          <button
+            type="button"
+            onclick="setGrowthFocus('${mode.id}');"
+            class="p-3.5 rounded-2xl border text-left transition-all ${
+              active
+                ? 'bg-white border-[#7138E8] shadow-sm ring-2 ring-[#7138E8]/15'
+                : 'bg-white/60 border-[#E9E6EF] hover:bg-white'
+            }"
+          >
+            <div class="text-xs font-bold text-[#25232B]">${mode.title}</div>
+            <div class="text-[11px] text-[#777481] mt-0.5">${mode.sub}</div>
+          </button>
+        `;
+      }).join('');
+
+      document.getElementById('slider-budget-label').textContent = `$${monthlyBudget.toLocaleString()}/mo`;
+      document.getElementById('slider-visitors-label').textContent = `${monthlyVisitors.toLocaleString()} visits`;
+      document.getElementById('slider-cvr-label').textContent = `${currentCvr.toFixed(1)}%`;
+
+      const proj = calculateRoiProjections();
+      document.getElementById('roi-tier-title').textContent = proj.recommendedTier;
+      document.getElementById('roi-roas-badge').textContent = `Est. ${proj.projectedRoas}x ROAS`;
+      document.getElementById('roi-pipeline-number').textContent = `+$${proj.estimatedSixMonthPipeline.toLocaleString()}`;
+      document.getElementById('roi-proj-visitors').textContent = proj.projectedVisitors.toLocaleString();
+      document.getElementById('roi-proj-cvr').textContent = `${proj.projectedCvr}%`;
+      document.getElementById('roi-proj-leads').textContent = proj.projectedMonthlyLeads.toLocaleString();
+    }
+
+    function setGrowthFocus(modeId) {
+      growthFocus = modeId;
+      renderGrowthLab();
+    }
+
+    function handleApplyRoiToEnquiry() {
+      const proj = calculateRoiProjections();
+      enquiryForm.services =
+        growthFocus === 'brand-web'
+          ? ['Brand Strategy & Identity Systems', 'High-Conversion Web Design & Engineering']
+          : growthFocus === 'performance'
+          ? ['Performance Marketing & Paid Acquisition', 'Conversion Optimization (CRO) & Growth Analytics']
+          : [
+              'Brand Strategy & Identity Systems',
+              'High-Conversion Web Design & Engineering',
+              'Performance Marketing & Paid Acquisition'
+            ];
+
+      enquiryForm.budget =
+        monthlyBudget < 10000
+          ? '$8k – $15k'
+          : monthlyBudget <= 25000
+          ? '$15k – $30k'
+          : '$30k – $60k+';
+
+      document.getElementById('input-goals').value = `Growth Lab Projection: Targeting ${proj.projectedMonthlyLeads.toLocaleString()} monthly qualified leads (+${proj.projectedCvr}% CVR) with the ${proj.recommendedTier}.`;
+
+      renderEnquiryFormConfig();
+      scrollToSection('contact');
+    }
+
+    /**
+     * =========================================================================
+     * 8. PROCESS STEPPER & FAQ ACCORDION LOGIC
+     * =========================================================================
+     */
+    function renderProcessSection() {
+      const tabsEl = document.getElementById('process-steps-tabs');
+      tabsEl.innerHTML = PROCESS_STEPS.map((item, idx) => {
+        const isActive = idx === activeProcessIndex;
+        return `
+          <button
+            type="button"
+            onclick="selectProcessStep(${idx});"
+            class="text-left p-6 rounded-3xl border transition-all ${
+              isActive
+                ? 'bg-white border-[#7138E8] shadow-md ring-2 ring-[#7138E8]/15'
+                : 'bg-white/60 border-[#E9E6EF] hover:bg-white'
+            }"
+          >
+            <div class="flex items-center justify-between mb-3">
+              <span class="font-mono-tech text-xs font-bold px-2.5 py-1 rounded-full ${
+                isActive ? 'bg-[#7138E8] text-white' : 'bg-[#F7F6FA] text-[#777481]'
+              }">
+                PHASE ${item.step}
+              </span>
+              <span class="font-mono-tech text-[11px] text-[#777481]">
+                ${item.duration}
+              </span>
+            </div>
+            <div class="font-display text-lg font-bold text-[#25232B] leading-snug">
+              ${item.title}
+            </div>
+          </button>
+        `;
+      }).join('');
+
+      const activeStep = PROCESS_STEPS[activeProcessIndex];
+      document.getElementById('process-lens-spec').textContent = activeStep.lensSpec;
+      document.getElementById('process-title').textContent = `${activeStep.step}. ${activeStep.title}`;
+      document.getElementById('process-summary').textContent = activeStep.summary;
+      document.getElementById('process-kpi').textContent = activeStep.kpiFocus;
+      document.getElementById('process-deliverables-heading').textContent = `PHASE ${activeStep.step} KEY DELIVERABLES:`;
+
+      document.getElementById('process-deliverables-grid').innerHTML = activeStep.deliverables
+        .map(
+          (deliv) => `
+          <div class="p-3.5 rounded-2xl bg-white border border-[#E9E6EF] flex items-start gap-2.5 text-sm font-medium text-[#25232B]">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-[#7138E8] shrink-0 mt-0.5"></i>
+            <span>${deliv}</span>
+          </div>
+        `
+        )
+        .join('');
+
+      lucide.createIcons();
+    }
+
+    function selectProcessStep(idx) {
+      activeProcessIndex = idx;
+      renderProcessSection();
+    }
+
+    function renderFaqSection() {
+      const container = document.getElementById('faq-accordion-container');
+      container.innerHTML = FAQ_ITEMS.map((item, idx) => {
+        const isOpen = openFaqIndex === idx;
+        return `
+          <div class="rounded-3xl bg-white border border-[#E9E6EF] overflow-hidden transition-all">
+            <button
+              type="button"
+              onclick="toggleFaq(${idx});"
+              class="w-full p-6 text-left flex items-center justify-between gap-4 hover:bg-[#F7F6FA]/50 transition-colors"
+            >
+              <span class="font-display text-base sm:text-lg font-bold text-[#25232B]">
+                ${item.q}
+              </span>
+              <span class="w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform ${
+                isOpen ? 'bg-[#7138E8] text-white rotate-180' : 'bg-[#F7F6FA] text-[#25232B]'
+              }">
+                <i data-lucide="chevron-down" class="w-4 h-4"></i>
+              </span>
+            </button>
+            ${
+              isOpen
+                ? `<div class="px-6 pb-6 text-sm sm:text-base text-[#777481] leading-relaxed border-t border-[#E9E6EF]/60 pt-4">${item.a}</div>`
+                : ''
+            }
+          </div>
+        `;
+      }).join('');
+
+      lucide.createIcons();
+    }
+
+    function toggleFaq(idx) {
+      openFaqIndex = openFaqIndex === idx ? -1 : idx;
+      renderFaqSection();
+    }
+
+    /**
+     * =========================================================================
+     * 9. PROJECT ENQUIRY CONFIGURATOR & FORM SUBMISSION
+     * =========================================================================
+     */
+    const BUDGET_OPTIONS = ['$8k – $15k', '$15k – $30k', '$30k – $60k+', 'Monthly Retainer'];
+    const TIMELINE_OPTIONS = ['Immediate', 'Within 30 Days', 'Q1 / Next Quarter', 'Exploring Options'];
+
+    function renderEnquiryFormConfig() {
+      // Service Pills
+      const pillsEl = document.getElementById('form-service-pills');
+      pillsEl.innerHTML = SERVICES_DATA.map((s) => {
+        const active = enquiryForm.services.includes(s.title);
+        return `
+          <button
+            type="button"
+            onclick="toggleFormService('${s.title.replace(/'/g, "\\'")}');"
+            class="px-3.5 py-2 rounded-full text-xs font-semibold border transition-all flex items-center gap-1.5 ${
+              active
+                ? 'bg-[#7138E8] text-white border-[#7138E8] shadow-sm'
+                : 'bg-white text-[#25232B] border-[#E9E6EF] hover:border-[#7138E8]/50'
+            }"
+          >
+            ${active ? '<i data-lucide="check" class="w-3.5 h-3.5"></i>' : ''}
+            <span>${s.title}</span>
+          </button>
+        `;
+      }).join('');
+
+      // Budget Buttons
+      const budgetEl = document.getElementById('form-budget-buttons');
+      budgetEl.innerHTML = BUDGET_OPTIONS.map((b) => {
+        const active = enquiryForm.budget === b;
+        return `
+          <button
+            type="button"
+            onclick="setFormBudget('${b}');"
+            class="py-2.5 px-3 rounded-xl text-xs font-semibold border transition-all ${
+              active
+                ? 'bg-[#25232B] text-white border-[#25232B]'
+                : 'bg-white text-[#25232B] border-[#E9E6EF] hover:border-[#25232B]/40'
+            }"
+          >
+            ${b}
+          </button>
+        `;
+      }).join('');
+
+      // Timeline Buttons
+      const timelineEl = document.getElementById('form-timeline-buttons');
+      timelineEl.innerHTML = TIMELINE_OPTIONS.map((t) => {
+        const active = enquiryForm.timeline === t;
+        return `
+          <button
+            type="button"
+            onclick="setFormTimeline('${t}');"
+            class="py-2.5 px-3 rounded-xl text-xs font-semibold border transition-all ${
+              active
+                ? 'bg-[#25232B] text-white border-[#25232B]'
+                : 'bg-white text-[#25232B] border-[#E9E6EF] hover:border-[#25232B]/40'
+            }"
+          >
+            ${t}
+          </button>
+        `;
+      }).join('');
+
+      lucide.createIcons();
+    }
+
+    function toggleFormService(serviceTitle) {
+      const exists = enquiryForm.services.includes(serviceTitle);
+      if (exists && enquiryForm.services.length === 1) return;
+      enquiryForm.services = exists
+        ? enquiryForm.services.filter((s) => s !== serviceTitle)
+        : [...enquiryForm.services, serviceTitle];
+      renderEnquiryFormConfig();
+    }
+
+    function setFormBudget(b) {
+      enquiryForm.budget = b;
+      renderEnquiryFormConfig();
+    }
+
+    function setFormTimeline(t) {
+      enquiryForm.timeline = t;
+      renderEnquiryFormConfig();
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const nameInput = document.getElementById('input-name');
+      const emailInput = document.getElementById('input-email');
+      const companyInput = document.getElementById('input-company');
+
+      const errorName = document.getElementById('error-name');
+      const errorEmail = document.getElementById('error-email');
+      const errorCompany = document.getElementById('error-company');
+
+      let hasError = false;
+
+      if (!nameInput.value.trim()) {
+        errorName.classList.remove('hidden');
+        nameInput.classList.add('border-rose-500');
+        hasError = true;
+      } else {
+        errorName.classList.add('hidden');
+        nameInput.classList.remove('border-rose-500');
+      }
+
+      if (!emailInput.value.trim() || !emailInput.value.includes('@')) {
+        errorEmail.classList.remove('hidden');
+        emailInput.classList.add('border-rose-500');
+        hasError = true;
+      } else {
+        errorEmail.classList.add('hidden');
+        emailInput.classList.remove('border-rose-500');
+      }
+
+      if (!companyInput.value.trim()) {
+        errorCompany.classList.remove('hidden');
+        companyInput.classList.add('border-rose-500');
+        hasError = true;
+      } else {
+        errorCompany.classList.add('hidden');
+        companyInput.classList.remove('border-rose-500');
+      }
+
+      if (hasError) return;
+
+      // Populate confirmation state
+      const refNum = Math.floor(100000 + Math.random() * 900000);
+      document.getElementById('confirm-ref-badge').textContent = `ENQUIRY CONFIRMED // REF #${refNum}`;
+      document.getElementById('confirm-heading').textContent = `Thank You, ${nameInput.value.trim()}. We're On It.`;
+      document.getElementById('confirm-message').innerHTML = `Our senior strategy team has received your project brief for <strong class="text-[#25232B]">${companyInput.value.trim()}</strong> and is preparing your initial diagnostic audit. We will reach out to <strong class="text-[#25232B]">${emailInput.value.trim()}</strong> within one business day.`;
+      document.getElementById('confirm-services-list').textContent = enquiryForm.services.join(', ');
+      document.getElementById('confirm-budget').textContent = enquiryForm.budget;
+      document.getElementById('confirm-timeline').textContent = enquiryForm.timeline;
+
+      document.getElementById('enquiry-form').classList.add('hidden');
+      document.getElementById('enquiry-confirmation').classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function resetEnquiryForm() {
+      document.getElementById('enquiry-confirmation').classList.add('hidden');
+      document.getElementById('enquiry-form').classList.remove('hidden');
+    }
+
+    /**
+     * =========================================================================
+     * 10. INITIALIZATION & EVENT LISTENERS ON WINDOW LOAD
+     * =========================================================================
+     */
+    window.addEventListener('DOMContentLoaded', () => {
+      // Set current copyright year
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+
+      // Populate Footer Capabilities Links
+      const footerCapList = document.getElementById('footer-capabilities-links');
+      footerCapList.innerHTML = SERVICES_DATA.map(
+        (s) => `
+        <li>
+          <button
+            type="button"
+            onclick="selectServiceById('${s.id}'); scrollToSection('services');"
+            class="hover:text-[#7138E8] transition-colors text-left"
+          >
+            ${s.title}
+          </button>
+        </li>
+      `
+      ).join('');
+
+      // Render all interactive sections
+      renderNavigationLinks();
+      renderHeroVisualizer();
+      renderServicesSection();
+      renderCaseStudiesSection();
+      renderGrowthLab();
+      renderProcessSection();
+      renderFaqSection();
+      renderEnquiryFormConfig();
+      updateDynamicIslandDOM();
+
+      // Start the strict 2.0-second (2000ms) initial mount timer for Dynamic Island
+      initialTimerId = setTimeout(() => {
+        isInitialPeriod = false;
+        updateDynamicIslandDOM();
+      }, 2000);
+
+      // Attach hover/focus/click listeners to Dynamic Island Pill
+      const navEl = document.getElementById('dynamic-island-nav');
+      navEl.addEventListener('mouseenter', () => {
+        if (hoverLeaveTimeoutId) clearTimeout(hoverLeaveTimeoutId);
+        isHoveredOrFocused = true;
+        updateDynamicIslandDOM();
+      });
+
+      navEl.addEventListener('mouseleave', () => {
+        if (hoverLeaveTimeoutId) clearTimeout(hoverLeaveTimeoutId);
+        hoverLeaveTimeoutId = setTimeout(() => {
+          isHoveredOrFocused = false;
+          updateDynamicIslandDOM();
+        }, 180);
+      });
+
+      navEl.addEventListener('focusin', () => {
+        if (hoverLeaveTimeoutId) clearTimeout(hoverLeaveTimeoutId);
+        isHoveredOrFocused = true;
+        updateDynamicIslandDOM();
+      });
+
+      navEl.addEventListener('focusout', () => {
+        if (hoverLeaveTimeoutId) clearTimeout(hoverLeaveTimeoutId);
+        hoverLeaveTimeoutId = setTimeout(() => {
+          isHoveredOrFocused = false;
+          updateDynamicIslandDOM();
+        }, 180);
+      });
+
+      navEl.addEventListener('click', () => {
+        if (!isIslandCurrentlyExpanded()) {
+          isHoveredOrFocused = true;
+          updateDynamicIslandDOM();
+        }
+      });
+
+      // Hero Aperture Slider Listener
+      const apertureSlider = document.getElementById('aperture-slider');
+      apertureSlider.addEventListener('input', (e) => {
+        apertureStop = parseFloat(e.target.value);
+        renderHeroVisualizer();
+      });
+
+      // Growth Lab Sliders Listeners
+      document.getElementById('slider-budget').addEventListener('input', (e) => {
+        monthlyBudget = Number(e.target.value);
+        renderGrowthLab();
+      });
+      document.getElementById('slider-visitors').addEventListener('input', (e) => {
+        monthlyVisitors = Number(e.target.value);
+        renderGrowthLab();
+      });
+      document.getElementById('slider-cvr').addEventListener('input', (e) => {
+        currentCvr = Number(e.target.value);
+        renderGrowthLab();
+      });
+
+      // Scroll Spy for Active Section Highlight
+      window.addEventListener(
+        'scroll',
+        () => {
+          const scrollPos = window.scrollY + 240;
+          const sectionIds = ['hero', 'services', 'work', 'growth-lab', 'process', 'why-shuttrly', 'faq', 'contact'];
+          for (const id of sectionIds) {
+            const el = document.getElementById(id);
+            if (el) {
+              const top = el.offsetTop;
+              const height = el.offsetHeight;
+              if (scrollPos >= top && scrollPos < top + height) {
+                if (activeSection !== id) {
+                  activeSection = id;
+                  renderNavigationLinks();
+                }
+                break;
+              }
+            }
+          }
+        },
+        { passive: true }
+      );
+
+      // Initialize Lucide icons
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
